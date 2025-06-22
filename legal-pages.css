@@ -616,6 +616,189 @@
     }
 }
 
+/* Deletion Form Styles */
+.deletion-form {
+    max-width: 600px;
+    margin: var(--space-lg) 0;
+}
+
+.form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--body-medium);
+    font-weight: 500;
+    color: var(--on-surface);
+    margin-bottom: var(--space-sm);
+}
+
+.form-label .material-icons {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: var(--space-md);
+    border: 2px solid var(--outline-variant);
+    border-radius: var(--radius-md);
+    background: var(--surface-container-lowest);
+    color: var(--on-surface);
+    font-size: var(--body-medium);
+    font-family: inherit;
+    transition: var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--surface-container-low);
+    box-shadow: 0 0 0 3px rgba(103, 80, 164, 0.1);
+}
+
+.form-input:invalid,
+.form-select:invalid,
+.form-textarea:invalid {
+    border-color: var(--error-color);
+}
+
+.form-help {
+    font-size: var(--body-small);
+    color: var(--on-surface-variant);
+    margin-top: var(--space-xs);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    cursor: pointer;
+    font-size: var(--body-medium);
+    color: var(--on-surface);
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--outline-variant);
+    border-radius: var(--radius-sm);
+    background: var(--surface-container-lowest);
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: var(--transition-fast);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid var(--on-primary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: var(--body-medium);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+.btn-danger {
+    background: var(--error-color);
+    color: var(--on-error);
+}
+
+.btn-danger:hover {
+    background: var(--error-container);
+    color: var(--on-error-container);
+    transform: translateY(-2px);
+    box-shadow: var(--elevation-2);
+}
+
+.btn-secondary {
+    background: var(--surface-container);
+    color: var(--on-surface);
+    border: 1px solid var(--outline-variant);
+}
+
+.btn-secondary:hover {
+    background: var(--surface-container-high);
+    border-color: var(--outline);
+    transform: translateY(-2px);
+    box-shadow: var(--elevation-2);
+}
+
+.form-message {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--body-medium);
+    font-weight: 500;
+}
+
+.form-message.success {
+    background: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+    border: 1px solid var(--tertiary-color);
+}
+
+.form-message.error {
+    background: var(--error-container);
+    color: var(--on-error-container);
+    border: 1px solid var(--error-color);
+}
+
+.form-message.info {
+    background: var(--surface-container-high);
+    color: var(--on-surface);
+    border: 1px solid var(--outline);
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
     .legal-section {
@@ -630,5 +813,15 @@
     
     .scenario {
         border-left-width: 6px;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+        border-width: 3px;
+    }
+    
+    .checkmark {
+        border-width: 3px;
     }
 }

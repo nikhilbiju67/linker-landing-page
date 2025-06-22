@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Request - Linkker</title>
+    <meta name="description" content="Request deletion of your Linkker account and associated data. Simple and secure data deletion process.">
+    
+    <!-- Google Fonts - Material 3 Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="legal-pages.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="linkker_logo.png">
+</head>
+<body class="legal-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-container">
+                    <img src="linkker_logo.png" alt="Linkker Logo" class="logo">
+                </div>
+                <span class="brand-text">Linkker</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#download" class="nav-link">Download</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="legal-header">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="material-icons">chevron_right</span>
+                <span>Data Deletion Request</span>
+            </div>
+            <h1 class="legal-title">Data Deletion Request</h1>
+            <p class="legal-subtitle">Request deletion of your account and associated data</p>
+        </div>
+
+        <!-- Content -->
+        <div class="legal-content">
+            <!-- Overview -->
+            <div class="legal-section">
+                <h2>Account & Data Deletion</h2>
+                <p>
+                    We respect your right to have your personal data deleted. If you wish to permanently delete your Linkker account and all associated data, you can submit a request through this page.
+                </p>
+                
+                <div class="info-card">
+                    <h4>What happens when you delete your account?</h4>
+                    <ul>
+                        <li>Your account will be permanently deleted and cannot be recovered</li>
+                        <li>All your saved links, collections, and preferences will be removed</li>
+                        <li>Your personal information will be deleted from our servers</li>
+                        <li>You will lose access to any premium features or subscriptions</li>
+                        <li>Deletion is typically completed within 30 days of your request</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Deletion Process -->
+            <div class="legal-section">
+                <h2>How to Request Deletion</h2>
+                
+                <div class="usage-grid">
+                    <div class="usage-card">
+                        <span class="material-icons">email</span>
+                        <h4>Email Request</h4>
+                        <p>Send an email to <strong>linkker.app@gmail.com</strong> with your account details and deletion request.</p>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <span class="material-icons">web</span>
+                        <h4>Online Form</h4>
+                        <p>Fill out the deletion request form below for quick and secure processing.</p>
+                    </div>
+                    
+                    <div class="usage-card">
+                        <span class="material-icons">support</span>
+                        <h4>Support Contact</h4>
+                        <p>Contact our support team directly for assistance with your deletion request.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deletion Request Form -->
+            <div class="legal-section">
+                <h2>Submit Deletion Request</h2>
+                <p>Use this form to request deletion of your Linkker account and associated data:</p>
+                
+                <form id="deletionForm" class="deletion-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <span class="material-icons">email</span>
+                            Account Email *
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your account email" required>
+                        <div class="form-help">The email address associated with your Linkker account</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmEmail" class="form-label">
+                            <span class="material-icons">verified</span>
+                            Confirm Email *
+                        </label>
+                        <input type="email" id="confirmEmail" name="confirmEmail" class="form-input" placeholder="Confirm your email address" required>
+                        <div class="form-help">Please re-enter your email to confirm</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reason" class="form-label">
+                            <span class="material-icons">help_outline</span>
+                            Reason for Deletion (Optional)
+                        </label>
+                        <select id="reason" name="reason" class="form-select">
+                            <option value="">Select a reason (optional)</option>
+                            <option value="privacy">Privacy concerns</option>
+                            <option value="not-using">No longer using the service</option>
+                            <option value="alternative">Found an alternative</option>
+                            <option value="technical">Technical issues</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalInfo" class="form-label">
+                            <span class="material-icons">notes</span>
+                            Additional Information (Optional)
+                        </label>
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-textarea" placeholder="Any additional information or feedback..." rows="4"></textarea>
+                        <div class="form-help">This helps us improve our service</div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="understand" name="understand" required>
+                            <span class="checkmark"></span>
+                            I understand that deleting my account is permanent and cannot be undone
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="dataExport" name="dataExport">
+                            <span class="checkmark"></span>
+                            I have exported my data (if needed)
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-danger">
+                            <span class="material-icons">delete_forever</span>
+                            Submit Deletion Request
+                        </button>
+                        <button type="button" class="btn btn-secondary" onclick="resetForm()">
+                            <span class="material-icons">refresh</span>
+                            Reset Form
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="formMessage" class="form-message" style="display: none;"></div>
+            </div>
+
+            <!-- Required Information -->
+            <div class="legal-section">
+                <h2>Information Required</h2>
+                <p>To process your deletion request, please provide the following information:</p>
+                
+                <div class="security-features">
+                    <div class="security-item">
+                        <span class="material-icons">account_circle</span>
+                        <div>
+                            <h4>Account Email</h4>
+                            <p>The email address associated with your Linkker account</p>
+                        </div>
+                    </div>
+                    
+                    <div class="security-item">
+                        <span class="material-icons">fingerprint</span>
+                        <div>
+                            <h4>Account Verification</h4>
+                            <p>Additional verification may be required to confirm account ownership</p>
+                        </div>
+                    </div>
+                    
+                    <div class="security-item">
+                        <span class="material-icons">description</span>
+                        <div>
+                            <h4>Reason (Optional)</h4>
+                            <p>While not required, sharing your reason helps us improve our service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="legal-section">
+                <h2>Deletion Timeline</h2>
+                
+                <div class="retention-info">
+                    <div class="retention-item">
+                        <h4>Request Acknowledgment</h4>
+                        <p>Within 48 hours of receiving your request</p>
+                    </div>
+                    
+                    <div class="retention-item">
+                        <h4>Account Deactivation</h4>
+                        <p>Immediate upon verification of your identity</p>
+                    </div>
+                    
+                    <div class="retention-item">
+                        <h4>Data Deletion</h4>
+                        <p>Complete within 30 days of request</p>
+                    </div>
+                    
+                    <div class="retention-item">
+                        <h4>Backup Removal</h4>
+                        <p>Up to 90 days for complete removal from all backups</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alternatives -->
+            <div class="legal-section">
+                <h2>Before You Delete</h2>
+                <p>Consider these alternatives to permanent account deletion:</p>
+                
+                <div class="sharing-scenarios">
+                    <div class="scenario">
+                        <h4>Account Deactivation</h4>
+                        <p>Temporarily deactivate your account instead of permanent deletion. You can reactivate later.</p>
+                    </div>
+                    
+                    <div class="scenario">
+                        <h4>Data Export</h4>
+                        <p>Export your data before deletion to keep a personal copy of your links and collections.</p>
+                    </div>
+                    
+                    <div class="scenario">
+                        <h4>Privacy Settings</h4>
+                        <p>Adjust your privacy settings to limit data collection while keeping your account active.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="legal-section">
+                <h2>Contact Information</h2>
+                <p>For data deletion requests or questions about the process:</p>
+                
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <span class="material-icons">email</span>
+                        <div>
+                            <strong>Support & Privacy</strong>
+                            <a href="mailto:linkker.app@gmail.com">linkker.app@gmail.com</a>
+                            <p>For data deletion requests, privacy inquiries, and general support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notes -->
+            <div class="legal-section">
+                <h2>Important Notes</h2>
+                
+                <div class="rights-grid">
+                    <div class="right-card">
+                        <span class="material-icons">warning</span>
+                        <h4>Irreversible</h4>
+                        <p>Account deletion is permanent and cannot be undone</p>
+                    </div>
+                    
+                    <div class="right-card">
+                        <span class="material-icons">schedule</span>
+                        <h4>Processing Time</h4>
+                        <p>Allow up to 30 days for complete data removal</p>
+                    </div>
+                    
+                    <div class="right-card">
+                        <span class="material-icons">verified_user</span>
+                        <h4>Identity Verification</h4>
+                        <p>We may require additional verification to protect your account</p>
+                    </div>
+                    
+                    <div class="right-card">
+                        <span class="material-icons">backup</span>
+                        <h4>System Backups</h4>
+                        <p>Data removal from backups may take up to 90 days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="legal-navigation">
+            <a href="privacy-policy.html" class="legal-nav-link">
+                <span class="material-icons">privacy_tip</span>
+                Privacy Policy
+            </a>
+            <a href="terms-of-service.html" class="legal-nav-link">
+                <span class="material-icons">description</span>
+                Terms of Service
+            </a>
+            <a href="index.html" class="legal-nav-link">
+                <span class="material-icons">home</span>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-container">
+                            <img src="linkker_logo.png" alt="Linkker Logo" class="logo">
+                        </div>
+                        <span class="brand-text">Linkker</span>
+                    </div>
+                    <p class="footer-description">
+                        Smart link management for the modern digital lifestyle. 
+                        Organize, search, and access your links effortlessly.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#download">Download</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="index.html#about">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="data-deletion.html">Data Deletion</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Status</a>
+                        <a href="#">Community</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Linkker. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <span class="material-icons">language</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-icons">code</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <span class="material-icons">chat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Form validation and submission
+        document.getElementById('deletionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const confirmEmail = document.getElementById('confirmEmail').value;
+            const understand = document.getElementById('understand').checked;
+            const messageDiv = document.getElementById('formMessage');
+            
+            // Clear previous messages
+            messageDiv.style.display = 'none';
+            messageDiv.className = 'form-message';
+            
+            // Validate email match
+            if (email !== confirmEmail) {
+                showMessage('Email addresses do not match. Please check and try again.', 'error');
+                return;
+            }
+            
+            // Validate understanding checkbox
+            if (!understand) {
+                showMessage('Please confirm that you understand account deletion is permanent.', 'error');
+                return;
+            }
+            
+            // Mock form submission
+            const formData = {
+                email: email,
+                reason: document.getElementById('reason').value,
+                additionalInfo: document.getElementById('additionalInfo').value,
+                dataExport: document.getElementById('dataExport').checked,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Simulate API call
+            setTimeout(() => {
+                console.log('Deletion request submitted:', formData);
+                showMessage(`Thank you! Your deletion request has been submitted for ${email}. We will get back to you within 48 hours with next steps. Request ID: DEL-${Math.random().toString(36).substr(2, 9).toUpperCase()}`, 'success');
+                
+                // Reset form after successful submission
+                document.getElementById('deletionForm').reset();
+            }, 1000);
+            
+            // Show loading state
+            showMessage('Submitting your deletion request...', 'info');
+        });
+        
+        function showMessage(message, type) {
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.textContent = message;
+            messageDiv.className = `form-message ${type}`;
+            messageDiv.style.display = 'block';
+            
+            // Scroll to message
+            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function resetForm() {
+            document.getElementById('deletionForm').reset();
+            document.getElementById('formMessage').style.display = 'none';
+        }
+        
+        // Email confirmation validation
+        document.getElementById('confirmEmail').addEventListener('input', function() {
+            const email = document.getElementById('email').value;
+            const confirmEmail = this.value;
+            
+            if (confirmEmail && email !== confirmEmail) {
+                this.setCustomValidity('Email addresses do not match');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+        
+        document.getElementById('email').addEventListener('input', function() {
+            const confirmEmail = document.getElementById('confirmEmail');
+            if (confirmEmail.value) {
+                confirmEmail.dispatchEvent(new Event('input'));
+            }
+        });
+    </script>
+</body>
+</html>
