@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkker - Smart Link Management</title>
     <meta name="description" content="Organize, categorize, and access your links seamlessly across all devices with Linkker - the ultimate link management solution.">
-    
-    <!-- Google Fonts - Material 3 Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts - Inter for modern feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="linkker_logo.png">
 </head>
@@ -28,9 +28,10 @@
             </div>
             <div class="nav-menu">
                 <a href="#features" class="nav-link">Features</a>
-                <a href="#download" class="nav-link">Download</a>
+                <a href="#platforms" class="nav-link">Platforms</a>
                 <a href="#about" class="nav-link">About</a>
             </div>
+            <a href="#download" class="nav-cta">Get Linkker</a>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="material-icons">menu</span>
             </div>
@@ -39,74 +40,97 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid-bg"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="material-icons">link</span>
-                    <span>Smart Link Management</span>
+                    <span class="badge-dot"></span>
+                    <span>Now on iOS, Android & Chrome</span>
                 </div>
                 <h1 class="hero-title">
-                    Organize Your Digital Life with 
-                    <span class="gradient-text">Linkker</span>
+                    Your links,<br>
+                    <span class="gradient-text">beautifully organized.</span>
                 </h1>
                 <p class="hero-description">
-                    Save, organize, and access your important links seamlessly across all devices. 
-                    Smart categorization, powerful search, and secure sharing - all in one place.
+                    Save, categorize, and access your links across every device.
+                    AI-powered organization, clipboard sync, P2P file transfer, and more.
                 </p>
                 <div class="hero-buttons">
                     <a href="#download" class="btn btn-primary">
                         <span class="material-icons">download</span>
-                        Get Started
+                        Download Free
                     </a>
-                    <a href="#features" class="btn btn-secondary">
-                        <span class="material-icons">play_arrow</span>
-                        Learn More
+                    <a href="#features" class="btn btn-ghost">
+                        See Features
+                        <span class="material-icons">arrow_forward</span>
                     </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">2K+</span>
+                        <span class="hero-stat-label">Users</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">20K+</span>
+                        <span class="hero-stat-label">Links Saved</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">4.8</span>
+                        <span class="hero-stat-label">Rating</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-card card-floating">
-                    <div class="card-header">
-                        <div class="logo-container small">
-                            <img src="linkker_logo.png" alt="Linkker" class="logo">
+                <div class="hero-card-wrapper">
+                    <div class="hero-card card-floating">
+                        <div class="card-header">
+                            <div class="logo-container small">
+                                <img src="linkker_logo.png" alt="Linkker" class="logo">
+                            </div>
+                            <div class="card-title">My Links</div>
+                            <div class="card-badge">Pro</div>
                         </div>
-                        <div class="card-title">My Links</div>
+                        <div class="card-content">
+                            <div class="link-item">
+                                <div class="link-icon">🔗</div>
+                                <div class="link-info">
+                                    <div class="link-title">Design Resources</div>
+                                    <div class="link-url">dribbble.com</div>
+                                </div>
+                                <div class="link-category">Design</div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">📚</div>
+                                <div class="link-info">
+                                    <div class="link-title">Programming Docs</div>
+                                    <div class="link-url">developer.mozilla.org</div>
+                                </div>
+                                <div class="link-category">Code</div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">⚡</div>
+                                <div class="link-info">
+                                    <div class="link-title">Tech News</div>
+                                    <div class="link-url">techcrunch.com</div>
+                                </div>
+                                <div class="link-category">News</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <div class="link-item">
-                            <div class="link-icon">🔗</div>
-                            <div class="link-info">
-                                <div class="link-title">Design Resources</div>
-                                <div class="link-url">dribbble.com</div>
-                            </div>
-                            <div class="link-category">Design</div>
-                        </div>
-                        <div class="link-item">
-                            <div class="link-icon">📚</div>
-                            <div class="link-info">
-                                <div class="link-title">Programming Docs</div>
-                                <div class="link-url">developer.mozilla.org</div>
-                            </div>
-                            <div class="link-category">Code</div>
-                        </div>
-                        <div class="link-item">
-                            <div class="link-icon">⚡</div>
-                            <div class="link-info">
-                                <div class="link-title">Tech News</div>
-                                <div class="link-url">techcrunch.com</div>
-                            </div>
-                            <div class="link-category">News</div>
-                        </div>
+                    <!-- Floating mini cards -->
+                    <div class="floating-chip chip-1">
+                        <span class="material-icons">content_paste</span> Clipboard Sync
+                    </div>
+                    <div class="floating-chip chip-2">
+                        <span class="material-icons">swap_horiz</span> File Transfer
+                    </div>
+                    <div class="floating-chip chip-3">
+                        <span class="material-icons">lock</span> Protected
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="hero-background">
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
             </div>
         </div>
     </section>
@@ -115,96 +139,120 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Powerful Features</h2>
-                <p class="section-description">Everything you need to manage your links efficiently</p>
+                <div class="section-badge">Features</div>
+                <h2 class="section-title">Everything you need,<br><span class="gradient-text">nothing you don't.</span></h2>
+                <p class="section-description">A complete toolkit for managing your digital life across every device.</p>
             </div>
-            
+
             <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card feature-card-large" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
                         <span class="material-icons">auto_awesome</span>
                     </div>
-                    <h3>Smart Categorization</h3>
-                    <p>Automatically categorize your links using AI. Technology, Programming, Design - organized effortlessly.</p>
+                    <h3>AI Smart Categorization</h3>
+                    <p>Links are automatically categorized by AI into Technology, Programming, Design, and more. Zero effort, perfect organization.</p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
                         <span class="material-icons">collections</span>
                     </div>
-                    <h3>Custom Collections</h3>
-                    <p>Create personalized collections and organize links your way. Hierarchical organization made simple.</p>
+                    <h3>Collections</h3>
+                    <p>Create custom collections to organize links your way.</p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
                         <span class="material-icons">sync</span>
                     </div>
                     <h3>Cross-Platform Sync</h3>
-                    <p>Access your links anywhere - mobile app, browser extension, or web. Always in sync.</p>
+                    <p>Everything stays in sync across iOS, Android, and Chrome.</p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature-icon">
                         <span class="material-icons">security</span>
                     </div>
-                    <h3>Private & Secure</h3>
-                    <p>Keep sensitive links private with protection features. Your data is encrypted and secure.</p>
+                    <h3>Password Protected</h3>
+                    <p>Lock sensitive links behind password protection.</p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <span class="material-icons">content_paste</span>
+                    </div>
+                    <h3>Clipboard Sync</h3>
+                    <p>Copy on one device, paste on another. Universal clipboard.</p>
+                </div>
+
+                <div class="feature-card feature-card-large" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <span class="material-icons">swap_horiz</span>
+                    </div>
+                    <h3>P2P File Transfer</h3>
+                    <p>Transfer files directly between devices over local WiFi. Fast, private, no cloud upload needed. Supports chunked transfer for large files.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
                     <div class="feature-icon">
                         <span class="material-icons">search</span>
                     </div>
-                    <h3>Powerful Search</h3>
-                    <p>Find any link instantly with intelligent search. Filter by category, collection, or keywords.</p>
+                    <h3>Instant Search</h3>
+                    <p>Find any link in milliseconds with smart search.</p>
                 </div>
-                
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
                     <div class="feature-icon">
                         <span class="material-icons">insights</span>
                     </div>
                     <h3>Smart Feed</h3>
-                    <p>Get personalized content recommendations based on your interests and browsing patterns.</p>
+                    <p>Personalized feed based on your saved links and interests.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Platform Section -->
-    <section class="platforms">
+    <section id="platforms" class="platforms">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Available Everywhere</h2>
-                <p class="section-description">Use Linkker on all your devices</p>
+                <div class="section-badge">Platforms</div>
+                <h2 class="section-title">Available <span class="gradient-text">everywhere.</span></h2>
+                <p class="section-description">Native apps built for each platform. Not just a web wrapper.</p>
             </div>
-            
+
             <div class="platforms-grid">
                 <div class="platform-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="platform-icon">
+                        <span class="material-icons">phone_iphone</span>
+                    </div>
+                    <h3>iOS App</h3>
+                    <p>Native SwiftUI app with widgets, share extension, and offline access.</p>
+                    <a href="https://apps.apple.com/in/app/linkker/id6747974035" target="_blank" rel="noopener noreferrer" class="platform-link">
+                        App Store <span class="material-icons">arrow_forward</span>
+                    </a>
+                </div>
+
+                <div class="platform-card platform-card-featured" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="platform-icon">
                         <span class="material-icons">phone_android</span>
                     </div>
-                    <h3>Mobile App</h3>
-                    <p>Native apps for iOS and Android with offline access and quick sharing.</p>
-                    <div class="platform-badge">Coming Soon</div>
+                    <h3>Android App</h3>
+                    <p>Material You design with quick sharing and background sync.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.linkker.app" target="_blank" rel="noopener noreferrer" class="platform-link">
+                        Google Play <span class="material-icons">arrow_forward</span>
+                    </a>
                 </div>
-                
-                <div class="platform-card" data-aos="zoom-in" data-aos-delay="200">
+
+                <div class="platform-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="platform-icon">
                         <span class="material-icons">extension</span>
                     </div>
-                    <h3>Browser Extension</h3>
-                    <p>Save links instantly while browsing. One-click saving with automatic metadata extraction.</p>
-                    <div class="platform-badge">Available</div>
-                </div>
-                
-                <div class="platform-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="platform-icon">
-                        <span class="material-icons">web</span>
-                    </div>
-                    <h3>Web App</h3>
-                    <p>Full-featured web application accessible from any browser, anywhere.</p>
-                    <div class="platform-badge">Available</div>
+                    <h3>Chrome Extension</h3>
+                    <p>One-click save with auto metadata, collections, and clipboard sync.</p>
+                    <a href="https://chromewebstore.google.com/detail/linkker-smart-link-manage/nbdnnigimoocchbceddjcnnbjpcoaplh" target="_blank" rel="noopener noreferrer" class="platform-link">
+                        Chrome Web Store <span class="material-icons">arrow_forward</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -214,69 +262,55 @@
     <section id="download" class="download">
         <div class="container">
             <div class="download-content">
-                <div class="download-info">
-                    <h2 class="download-title">Get Linkker Today</h2>
+                <div class="download-glow"></div>
+                <div class="download-inner">
+                    <h2 class="download-title">Ready to get organized?</h2>
                     <p class="download-description">
-                        Start organizing your digital life with Linkker. Choose your platform and get started in seconds.
+                        Join 2,000+ users who've simplified their digital life with Linkker. Free to start.
                     </p>
-                    <div class="download-stats">
-                        <div class="stat">
-                            <div class="stat-number">10K+</div>
-                            <div class="stat-label">Active Users</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100K+</div>
-                            <div class="stat-label">Links Organized</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">4 .8★</div>
-                            <div class="stat-label">User Rating</div>
-                        </div>
+                    <div class="download-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.linkker.app" class="download-btn" data-aos="fade-up" target="_blank" rel="noopener noreferrer">
+                            <div class="download-btn-content">
+                                <div class="download-btn-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                    </svg>
+                                </div>
+                                <div class="download-btn-text">
+                                    <div class="download-btn-label">Get it on</div>
+                                    <div class="download-btn-store">Google Play</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://apps.apple.com/in/app/linkker/id6747974035" class="download-btn" data-aos="fade-up" data-aos-delay="100" target="_blank" rel="noopener noreferrer">
+                            <div class="download-btn-content">
+                                <div class="download-btn-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
+                                    </svg>
+                                </div>
+                                <div class="download-btn-text">
+                                    <div class="download-btn-label">Download on the</div>
+                                    <div class="download-btn-store">App Store</div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://chromewebstore.google.com/detail/linkker-smart-link-manage/nbdnnigimoocchbceddjcnnbjpcoaplh" class="download-btn" data-aos="fade-up" data-aos-delay="200" target="_blank" rel="noopener noreferrer">
+                            <div class="download-btn-content">
+                                <div class="download-btn-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,20L15.46,14H15.46C15.79,13.4 16,12.73 16,12C16,10.8 15.46,9.73 14.62,9H19.41C19.79,9.93 20,10.94 20,12A8,8 0 0,1 12,20M4,12C4,10.54 4.39,9.18 5.07,8.04L8.54,14C8.21,14.6 8,15.27 8,16C8,17.2 8.54,18.27 9.38,19H4.59C4.21,18.07 4,17.06 4,16V12M12,4A8,8 0 0,1 19.41,8H14.62C14.28,7.4 13.8,6.87 13.21,6.46L15.46,2.04C15.79,1.4 16,0.73 16,0H8V0C8,0.73 8.21,1.4 8.54,2.04L10.79,6.46C10.2,6.87 9.72,7.4 9.38,8H4.59A8,8 0 0,1 12,4M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                                    </svg>
+                                </div>
+                                <div class="download-btn-text">
+                                    <div class="download-btn-label">Add to</div>
+                                    <div class="download-btn-store">Chrome</div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                
-                <div class="download-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.linkker.app&hl=en&gl=US" class="download-btn playstore-btn" data-aos="fade-up" target="_blank" rel="noopener noreferrer">
-                        <div class="download-btn-content">
-                            <div class="download-btn-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                                </svg>
-                            </div>
-                            <div class="download-btn-text">
-                                <div class="download-btn-label">Get it on</div>
-                                <div class="download-btn-store">Google Play</div>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://apps.apple.com/in/app/linkker/id6747974035" class="download-btn appstore-btn" data-aos="fade-up" data-aos-delay="100" target="_blank" rel="noopener noreferrer">
-                        <div class="download-btn-content">
-                            <div class="download-btn-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
-                                </svg>
-                            </div>
-                            <div class="download-btn-text">
-                                <div class="download-btn-label">Download on the</div>
-                                <div class="download-btn-store">App Store</div>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://chromewebstore.google.com/detail/linkker-smart-link-manage/nbdnnigimoocchbceddjcnnbjpcoaplh" class="download-btn chrome-btn" data-aos="fade-up" data-aos-delay="200" target="_blank" rel="noopener noreferrer">
-                        <div class="download-btn-content">
-                            <div class="download-btn-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12,20L15.46,14H15.46C15.79,13.4 16,12.73 16,12C16,10.8 15.46,9.73 14.62,9H19.41C19.79,9.93 20,10.94 20,12A8,8 0 0,1 12,20M4,12C4,10.54 4.39,9.18 5.07,8.04L8.54,14C8.21,14.6 8,15.27 8,16C8,17.2 8.54,18.27 9.38,19H4.59C4.21,18.07 4,17.06 4,16V12M12,4A8,8 0 0,1 19.41,8H14.62C14.28,7.4 13.8,6.87 13.21,6.46L15.46,2.04C15.79,1.4 16,0.73 16,0H8V0C8,0.73 8.21,1.4 8.54,2.04L10.79,6.46C10.2,6.87 9.72,7.4 9.38,8H4.59A8,8 0 0,1 12,4M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
-                                </svg>
-                            </div>
-                            <div class="download-btn-text">
-                                <div class="download-btn-label">Add to</div>
-                                <div class="download-btn-store">Chrome</div>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
@@ -287,32 +321,53 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
-                    <h2 class="about-title">Why Choose Linkker?</h2>
+                    <div class="section-badge">Why Linkker</div>
+                    <h2 class="about-title">Stop losing links.<br>Start <span class="gradient-text">organizing.</span></h2>
                     <p class="about-description">
-                        In today's digital world, we save countless links but often lose track of them. 
-                        Linkker solves this problem by providing an intelligent, beautiful, and secure way 
-                        to organize your digital resources.
+                        We save dozens of links every week but lose track of most of them.
+                        Linkker gives you a single, intelligent system to save, organize, and
+                        access everything across every device you own.
                     </p>
                     <div class="about-features">
                         <div class="about-feature">
-                            <span class="material-icons">bolt</span>
-                            <span>Lightning-fast search and organization</span>
+                            <div class="about-feature-icon">
+                                <span class="material-icons">bolt</span>
+                            </div>
+                            <div>
+                                <strong>Lightning Fast</strong>
+                                <span>Search and organize in milliseconds</span>
+                            </div>
                         </div>
                         <div class="about-feature">
-                            <span class="material-icons">psychology</span>
-                            <span>AI-powered smart categorization</span>
+                            <div class="about-feature-icon">
+                                <span class="material-icons">psychology</span>
+                            </div>
+                            <div>
+                                <strong>AI-Powered</strong>
+                                <span>Smart categorization without lifting a finger</span>
+                            </div>
                         </div>
                         <div class="about-feature">
-                            <span class="material-icons">devices</span>
-                            <span>Seamless cross-device synchronization</span>
+                            <div class="about-feature-icon">
+                                <span class="material-icons">devices</span>
+                            </div>
+                            <div>
+                                <strong>Every Device</strong>
+                                <span>iOS, Android, Chrome - always in sync</span>
+                            </div>
                         </div>
                         <div class="about-feature">
-                            <span class="material-icons">lock</span>
-                            <span>Enterprise-grade security and privacy</span>
+                            <div class="about-feature-icon">
+                                <span class="material-icons">lock</span>
+                            </div>
+                            <div>
+                                <strong>Private & Secure</strong>
+                                <span>Your data stays yours, always encrypted</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="about-visual" data-aos="fade-left">
                     <div class="about-card">
                         <div class="about-card-header">
@@ -324,19 +379,23 @@
                         <div class="about-card-content">
                             <div class="category-item">
                                 <div class="category-color" style="background: var(--primary-color);"></div>
-                                <span>Technology (24)</span>
+                                <span>Technology</span>
+                                <span class="category-count">24</span>
                             </div>
                             <div class="category-item">
                                 <div class="category-color" style="background: var(--secondary-color);"></div>
-                                <span>Programming (18)</span>
+                                <span>Programming</span>
+                                <span class="category-count">18</span>
                             </div>
                             <div class="category-item">
                                 <div class="category-color" style="background: var(--tertiary-color);"></div>
-                                <span>Design (12)</span>
+                                <span>Design</span>
+                                <span class="category-count">12</span>
                             </div>
                             <div class="category-item">
-                                <div class="category-color" style="background: var(--error-color);"></div>
-                                <span>News (8)</span>
+                                <div class="category-color" style="background: var(--accent-color);"></div>
+                                <span>News</span>
+                                <span class="category-count">8</span>
                             </div>
                         </div>
                     </div>
@@ -357,59 +416,47 @@
                         <span class="brand-text">Linkker</span>
                     </div>
                     <p class="footer-description">
-                        Smart link management for the modern digital lifestyle. 
+                        Smart link management for the modern digital lifestyle.
                         Organize, search, and access your links effortlessly.
                     </p>
                 </div>
-                
+
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4>Product</h4>
                         <a href="#features">Features</a>
                         <a href="#download">Download</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">FAQ</a>
+                        <a href="#platforms">Platforms</a>
                     </div>
-                    
+
                     <div class="footer-column">
                         <h4>Company</h4>
                         <a href="#about">About</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Contact</a>
+                        <a href="mailto:support@linkker.app">Contact</a>
                     </div>
-                    
+
                     <div class="footer-column">
                         <h4>Legal</h4>
                         <a href="terms-of-service.html">Terms of Service</a>
                         <a href="privacy-policy.html">Privacy Policy</a>
                         <a href="data-deletion.html">Data Deletion</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Support</h4>
-                        <a href="#">Help Center</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#">Status</a>
-                        <a href="#">Community</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2024 Linkker. All rights reserved.</p>
+                    <p>&copy; 2025 Linkker. All rights reserved.</p>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="social-link">
-                        <span class="material-icons">language</span>
+                    <a href="https://apps.apple.com/in/app/linkker/id6747974035" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="material-icons">phone_iphone</span>
                     </a>
-                    <a href="#" class="social-link">
-                        <span class="material-icons">code</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.linkker.app" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="material-icons">phone_android</span>
                     </a>
-                    <a href="#" class="social-link">
-                        <span class="material-icons">chat</span>
+                    <a href="https://chromewebstore.google.com/detail/linkker-smart-link-manage/nbdnnigimoocchbceddjcnnbjpcoaplh" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <span class="material-icons">extension</span>
                     </a>
                 </div>
             </div>
