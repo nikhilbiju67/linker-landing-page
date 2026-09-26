@@ -1,559 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Linkker</title>
-    <meta name="description" content="Privacy Policy for Linkker - How we collect, use, and protect your personal data">
-    
-    <!-- Google Fonts - Material 3 Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="legal-pages.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="linkker_logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Linkker</title>
+  <meta name="description" content="How Linkker collects, uses, stores and protects your data across the iPhone app, Android app and Chrome extension.">
+  <link rel="canonical" href="https://linker-landing-page.vercel.app/privacy-policy">
+  <meta name="theme-color" content="#fbf8f3">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Linkker">
+  <meta property="og:title" content="Linkker Privacy Policy">
+  <meta property="og:description" content="How Linkker collects, uses, stores and protects your data.">
+  <meta property="og:url" content="https://linker-landing-page.vercel.app/privacy-policy">
+  <meta property="og:image" content="https://linker-landing-page.vercel.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="/assets/site.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">
-                <div class="logo-container">
-                    <img src="linkker_logo.png" alt="Linkker Logo" class="logo">
-                </div>
-                <span class="brand-text">Linkker</span>
-            </a>
-            <div class="nav-menu">
-                <a href="index.html#features" class="nav-link">Features</a>
-                <a href="index.html#download" class="nav-link">Download</a>
-                <a href="index.html#about" class="nav-link">About</a>
-                <a href="index.html" class="nav-link">Home</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="material-icons">menu</span>
-            </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Linkker home"><img src="/assets/logo-tile.svg" alt="" width="36" height="36">Linkker</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-menu" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg>
+        <svg class="i-close" aria-hidden="true"><use href="/assets/icons.svg#i-close"/></svg>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="/#features">Features</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/support">Support</a>
+        <a class="btn btn--primary btn--sm" href="/#download">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Privacy Policy</span></nav>
+        <h1>Privacy Policy</h1>
+        <p class="meta">Last updated: <time datetime="2026-09-26">26 September 2026</time></p>
+      </div>
+    </div>
+
+    <div class="wrap doc-layout">
+      <aside class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+          <li><a href="#intro">1. Introduction</a></li>
+          <li><a href="#collect">2. Information we collect</a></li>
+          <li><a href="#use">3. How we use it</a></li>
+          <li><a href="#ai">4. AI categorisation</a></li>
+          <li><a href="#transfer">5. Phone-to-computer transfer</a></li>
+          <li><a href="#protected">6. Protected links</a></li>
+          <li><a href="#share">7. Sharing &amp; service providers</a></li>
+          <li><a href="#security">8. Data security</a></li>
+          <li><a href="#rights">9. Your rights</a></li>
+          <li><a href="#retention">10. Retention &amp; deletion</a></li>
+          <li><a href="#international">11. International transfers</a></li>
+          <li><a href="#children">12. Children</a></li>
+          <li><a href="#website">13. This website &amp; cookies</a></li>
+          <li><a href="#regional">14. Regional laws</a></li>
+          <li><a href="#changes">15. Changes</a></li>
+          <li><a href="#contact">16. Contact</a></li>
+        </ol>
+      </aside>
+
+      <article class="prose">
+        <div class="callout">
+          <p><strong>The short version:</strong> we store your account and the links you save so Linkker can sync them across your devices and sort them for you. Files you send between your phone and computer travel over your own Wi-Fi, not through our servers. We don’t sell your data. You can delete your account at any time.</p>
         </div>
-    </nav>
 
-    <!-- Legal Content -->
-    <main class="legal-page">
-        <div class="container">
-            <!-- Header -->
-            <div class="legal-header">
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a>
-                    <span class="material-icons">chevron_right</span>
-                    <span>Privacy Policy</span>
-                </div>
-                <h1 class="legal-title">Privacy Policy</h1>
-                <p class="legal-subtitle">Last updated: December 15, 2024</p>
-            </div>
+        <section id="intro">
+          <h2>1. Introduction</h2>
+          <p>Linkker (“Linkker”, “we”, “us”) is developed and operated by Nikhil Biju. This Privacy Policy explains how we collect, use, disclose and safeguard your information when you use Linkker, including our iPhone app, Android app, Chrome extension and this website (together, the “Service”).</p>
+          <p>By using Linkker, you agree to the data practices described in this Privacy Policy. If you do not agree with them, please do not use the Service.</p>
+        </section>
 
-            <!-- Privacy Content -->
-            <div class="legal-content">
-                <section class="legal-section">
-                    <h2>1. Introduction</h2>
-                    <p>
-                        At Linkker, we take your privacy seriously. This Privacy Policy explains how we collect, 
-                        use, disclose, and safeguard your information when you use our link management service, 
-                        including our mobile applications, browser extensions, and web platform.
-                    </p>
-                    <p>
-                        By using Linkker, you consent to the data practices described in this Privacy Policy. 
-                        If you do not agree with the practices described here, you should not use our services.
-                    </p>
-                </section>
+        <section id="collect">
+          <h2>2. Information we collect</h2>
 
-                <section class="legal-section">
-                    <h2>2. Information We Collect</h2>
-                    
-                    <h3>2.1 Information You Provide to Us</h3>
-                    <div class="info-card">
-                        <h4>Account Information</h4>
-                        <ul>
-                            <li>Email address</li>
-                            <li>Password (encrypted)</li>
-                            <li>Full name (optional)</li>
-                            <li>Profile picture (optional)</li>
-                            <li>User preferences and settings</li>
-                        </ul>
-                    </div>
+          <h3>2.1 Account information</h3>
+          <p>You sign in to Linkker with <strong>Sign in with Google</strong> or <strong>Sign in with Apple</strong>. From your chosen provider we receive:</p>
+          <ul>
+            <li>Your name and email address (with Sign in with Apple you may choose to hide your email, in which case we receive an Apple relay address)</li>
+            <li>Your profile picture, if your provider shares one</li>
+            <li>A unique account identifier and authentication tokens, used to keep you signed in securely</li>
+          </ul>
+          <p>We never receive your Google or Apple password.</p>
 
-                    <div class="info-card">
-                        <h4>Content Data</h4>
-                        <ul>
-                            <li>URLs and links you save</li>
-                            <li>Titles and descriptions you add</li>
-                            <li>Collections and categories you create</li>
-                            <li>Tags and notes you assign</li>
-                            <li>Sharing and collaboration settings</li>
-                        </ul>
-                    </div>
+          <h3>2.2 Content you save</h3>
+          <ul>
+            <li>The URLs you save, and the titles, descriptions and notes attached to them</li>
+            <li>Collections, folders and categories you create or that are suggested for you</li>
+            <li>Settings on individual links, such as marking a link as protected or “Not safe for work”</li>
+            <li>Page metadata we fetch for saved links: page title, description, thumbnail image and site name</li>
+          </ul>
 
-                    <h3>2.2 Information We Collect Automatically</h3>
-                    <div class="info-card">
-                        <h4>Usage Information</h4>
-                        <ul>
-                            <li>Device information (type, operating system, browser)</li>
-                            <li>IP address and location data</li>
-                            <li>Usage patterns and feature interactions</li>
-                            <li>Performance and error data</li>
-                            <li>Session duration and frequency</li>
-                        </ul>
-                    </div>
+          <h3>2.3 Information collected automatically</h3>
+          <ul>
+            <li>Device information: device model, operating system and version, app version, language</li>
+            <li>Usage and diagnostic data: features used, errors and performance information</li>
+            <li>For phone-to-computer transfer: the device name and local network address of your paired devices, and whether they are currently online (see section 5)</li>
+            <li>In the Android app: app events and device identifiers collected by the Facebook App Events SDK (see section 7)</li>
+          </ul>
 
-                    <div class="info-card">
-                        <h4>Metadata We Extract</h4>
-                        <ul>
-                            <li>Page titles and descriptions from saved URLs</li>
-                            <li>Thumbnails and images from web pages</li>
-                            <li>Publication dates and authors</li>
-                            <li>Website categories and tags</li>
-                        </ul>
-                    </div>
+          <h3>2.4 Clipboard and browser tabs</h3>
+          <p>To offer to save a link you just copied, the apps may check your clipboard for a web address when you open them. Clipboard contents are only sent to us if you choose to save the link. The Chrome extension reads the address and title of the current tab only when you ask it to save that tab; it does not track your browsing history.</p>
 
-                    <h3>2.3 Information from Third Parties</h3>
-                    <p>
-                        When you sign in through third-party services (like Google), we may receive:
-                    </p>
-                    <ul>
-                        <li>Basic profile information (name, email, profile picture)</li>
-                        <li>Authentication tokens for secure access</li>
-                        <li>Permissions you grant for data access</li>
-                    </ul>
-                </section>
+          <h3>2.5 Purchases</h3>
+          <p>If you subscribe to Linkker Pro, we receive the status of your subscription (plan, start and renewal dates, and a transaction reference) from the store or payment provider. We do not receive or store your full card number.</p>
+        </section>
 
-                <section class="legal-section">
-                    <h2>3. How We Use Your Information</h2>
-                    
-                    <div class="usage-grid">
-                        <div class="usage-card">
-                            <span class="material-icons">settings</span>
-                            <h4>Service Operation</h4>
-                            <ul>
-                                <li>Provide and maintain the service</li>
-                                <li>Process your requests and transactions</li>
-                                <li>Sync data across your devices</li>
-                                <li>Enable collaboration features</li>
-                            </ul>
-                        </div>
+        <section id="use">
+          <h2>3. How we use your information</h2>
+          <ul>
+            <li><strong>To provide the Service:</strong> store your links and collections, sync them across your devices, and show them to you</li>
+            <li><strong>To organise your links:</strong> suggest categories automatically (see section 4) and power search</li>
+            <li><strong>To connect your devices:</strong> help your phone and computer find each other on your local network</li>
+            <li><strong>To manage subscriptions:</strong> unlock Pro features and handle billing questions</li>
+            <li><strong>To keep Linkker secure:</strong> authenticate you and detect abuse or fraud</li>
+            <li><strong>To improve Linkker:</strong> understand which features are used and fix bugs</li>
+            <li><strong>To support you:</strong> reply when you contact us</li>
+          </ul>
+        </section>
 
-                        <div class="usage-card">
-                            <span class="material-icons">auto_awesome</span>
-                            <h4>Personalization</h4>
-                            <ul>
-                                <li>Provide personalized content recommendations</li>
-                                <li>Automatically categorize your links</li>
-                                <li>Customize your user experience</li>
-                                <li>Generate intelligent insights</li>
-                            </ul>
-                        </div>
+        <section id="ai">
+          <h2>4. AI categorisation of saved links</h2>
+          <p>When you save a link, Linkker uses automated systems, which may include AI models run by our service providers on our behalf, to suggest a category for it (for example “Recipes” or “Read later”). To do this we process the link’s URL and the page metadata described in section 2.2. We do not include your name or email address in this processing. You can change or remove any suggested category.</p>
+        </section>
 
-                        <div class="usage-card">
-                            <span class="material-icons">security</span>
-                            <h4>Security & Support</h4>
-                            <ul>
-                                <li>Authenticate your identity</li>
-                                <li>Detect and prevent fraud</li>
-                                <li>Provide customer support</li>
-                                <li>Ensure service security</li>
-                            </ul>
-                        </div>
+        <section id="transfer">
+          <h2>5. Phone-to-computer transfer</h2>
+          <p>Linkker can send links and files between your phone and your computer (via the Chrome extension) after you pair them by scanning a QR code.</p>
+          <ul>
+            <li><strong>Transfers stay on your network.</strong> Links and files are sent directly between your devices over your local Wi-Fi network. File contents are not uploaded to our servers.</li>
+            <li><strong>Device lookup.</strong> To help your devices find each other, our servers keep a small record for each device you use with transfer: a device identifier, the device name, its local network address and port, and when it was last online. This record is linked to your account and is deleted when you delete your account.</li>
+            <li><strong>Pairing.</strong> Pairing creates a session token stored on both devices. You can unpair at any time in the app.</li>
+          </ul>
+        </section>
 
-                        <div class="usage-card">
-                            <span class="material-icons">analytics</span>
-                            <h4>Analytics & Improvement</h4>
-                            <ul>
-                                <li>Analyze usage patterns</li>
-                                <li>Improve our services</li>
-                                <li>Develop new features</li>
-                                <li>Monitor service performance</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+        <section id="protected">
+          <h2>6. Protected and “Not safe for work” links</h2>
+          <p>Links you mark as protected or “Not safe for work” are hidden in the apps until you unlock them with your PIN, Face ID, Touch ID or fingerprint. Biometric checks are performed by your device’s operating system. We never receive your fingerprint or face data. Hiding a link changes how it is displayed; the link itself is still stored with your account so it can sync to your other devices.</p>
+        </section>
 
-                <section class="legal-section">
-                    <h2>4. Information Sharing and Disclosure</h2>
-                    
-                    <h3>4.1 We Do Not Sell Your Personal Information</h3>
-                    <p>
-                        We do not sell, trade, or rent your personal information to third parties for 
-                        commercial purposes.
-                    </p>
+        <section id="share">
+          <h2>7. Information sharing and service providers</h2>
 
-                    <h3>4.2 When We May Share Information</h3>
-                    <div class="sharing-scenarios">
-                        <div class="scenario">
-                            <h4>With Your Consent</h4>
-                            <p>When you explicitly authorize us to share information with third parties.</p>
-                        </div>
+          <h3>7.1 We do not sell your personal information</h3>
+          <p>We do not sell, trade or rent your personal information or your saved links to anyone.</p>
 
-                        <div class="scenario">
-                            <h4>Service Providers</h4>
-                            <p>With trusted third-party service providers who help us operate our service (hosting, analytics, customer support).</p>
-                        </div>
+          <h3>7.2 Service providers</h3>
+          <p>We use trusted providers who process data on our behalf to run Linkker:</p>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">Provider</th><th scope="col">Purpose</th><th scope="col">Data involved</th></tr></thead>
+              <tbody>
+                <tr><td>Amazon Web Services (AWS)</td><td>Hosting our API and backend services</td><td>Account data, saved links and collections, device records</td></tr>
+                <tr><td>Supabase</td><td>Database and storage</td><td>Account data, saved links and collections</td></tr>
+                <tr><td>Google and Apple</td><td>Sign-in; App Store and Google Play purchases</td><td>Sign-in identity; purchase records</td></tr>
+                <tr><td>RevenueCat</td><td>Managing in-app subscriptions on iPhone and Android</td><td>An app user ID, purchase receipts and subscription status</td></tr>
+                <tr><td>Dodo Payments</td><td>Processing subscriptions bought from the Chrome extension (web checkout)</td><td>Name, email, billing details and payment information you enter at checkout</td></tr>
+                <tr><td>Meta (Facebook App Events SDK)</td><td>Measuring app installs and in-app events in the Android app</td><td>App events (such as app opens, sign-ups and purchases), device and app information, advertising identifier or an anonymous app ID</td></tr>
+                <tr><td>AI model providers</td><td>Suggesting categories for saved links</td><td>Link URLs and page metadata</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>You can limit how your advertising identifier is used in your Android settings (Settings → Google → Ads, or Settings → Privacy → Ads, depending on your device), for example by deleting or resetting it.</p>
 
-                        <div class="scenario">
-                            <h4>Legal Requirements</h4>
-                            <p>When required by law, legal process, or to protect our rights and the safety of our users.</p>
-                        </div>
+          <h3>7.3 Other situations</h3>
+          <ul>
+            <li><strong>With your consent</strong>, when you ask us to share information</li>
+            <li><strong>Legal requirements</strong>, when required by law or legal process, or to protect the rights and safety of our users</li>
+            <li><strong>Business transfers</strong>, in connection with a merger, acquisition or sale of assets, with notice to you</li>
+            <li><strong>Aggregated data</strong> that cannot identify you</li>
+          </ul>
+        </section>
 
-                        <div class="scenario">
-                            <h4>Business Transfers</h4>
-                            <p>In connection with a merger, acquisition, or sale of assets, with proper notice to users.</p>
-                        </div>
+        <section id="security">
+          <h2>8. Data security</h2>
+          <ul>
+            <li><strong>Encryption:</strong> data is encrypted in transit (TLS) and at rest by our hosting providers</li>
+            <li><strong>Access controls:</strong> strict authentication for access to our systems</li>
+            <li><strong>Monitoring:</strong> we monitor for security threats and vulnerabilities</li>
+            <li><strong>Backups:</strong> regular encrypted backups to prevent data loss</li>
+          </ul>
+          <p>No system is perfectly secure. In the event of a data breach, we will notify affected users and the relevant authorities as required by applicable law.</p>
+        </section>
 
-                        <div class="scenario">
-                            <h4>Aggregated Data</h4>
-                            <p>We may share anonymized, aggregated data that cannot identify individual users.</p>
-                        </div>
-                    </div>
-                </section>
+        <section id="rights">
+          <h2>9. Your privacy rights</h2>
+          <p>Depending on where you live, you may have the right to:</p>
+          <ul>
+            <li><strong>Access</strong>: request a copy of the personal data we hold about you</li>
+            <li><strong>Correction</strong>: ask us to correct inaccurate or incomplete data</li>
+            <li><strong>Deletion</strong>: delete your account and data (see <a href="/delete-account">Delete your account</a>)</li>
+            <li><strong>Portability</strong>: receive your data in a machine-readable format</li>
+            <li><strong>Objection and restriction</strong>: object to or restrict certain processing</li>
+            <li><strong>Withdraw consent</strong> where processing is based on consent</li>
+          </ul>
+          <p>To exercise these rights, email <a href="mailto:nikhilbiju6449@gmail.com">nikhilbiju6449@gmail.com</a> from the email address on your account. We will respond within 30 days.</p>
+        </section>
 
-                <section class="legal-section">
-                    <h2>5. Data Security</h2>
-                    
-                    <h3>5.1 Security Measures</h3>
-                    <p>We implement industry-standard security measures to protect your information:</p>
-                    
-                    <div class="security-features">
-                        <div class="security-item">
-                            <span class="material-icons">lock</span>
-                            <div>
-                                <h4>Encryption</h4>
-                                <p>Data is encrypted in transit (TLS) and at rest (AES-256)</p>
-                            </div>
-                        </div>
+        <section id="retention">
+          <h2>10. Data retention and deletion</h2>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">Data</th><th scope="col">How long we keep it</th></tr></thead>
+              <tbody>
+                <tr><td>Account data, saved links and collections</td><td>While your account is active. Deleted within 30 days of account deletion.</td></tr>
+                <tr><td>Transfer device records</td><td>While your account is active, or until you remove the device</td></tr>
+                <tr><td>Backups</td><td>Removed from backups within 90 days of deletion</td></tr>
+                <tr><td>Support emails</td><td>Up to 3 years, then deleted</td></tr>
+                <tr><td>Payment and subscription records</td><td>As long as required by tax and accounting laws</td></tr>
+                <tr><td>Aggregated usage data</td><td>Up to 2 years, in a form that doesn’t identify you</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>You can delete your account in the app (Profile → Delete account; on Android, Profile → Settings → Delete Account) or <a href="/delete-account">request deletion without the app</a>. Deleting the app from your phone does not delete your account.</p>
+        </section>
 
-                        <div class="security-item">
-                            <span class="material-icons">verified_user</span>
-                            <div>
-                                <h4>Access Controls</h4>
-                                <p>Strict access controls and authentication for our systems</p>
-                            </div>
-                        </div>
+        <section id="international">
+          <h2>11. International data transfers</h2>
+          <p>Your information may be transferred to and processed in countries other than your own, including where our service providers operate. We rely on appropriate safeguards for these transfers, such as Standard Contractual Clauses and our providers’ security commitments.</p>
+        </section>
 
-                        <div class="security-item">
-                            <span class="material-icons">monitor_heart</span>
-                            <div>
-                                <h4>Monitoring</h4>
-                                <p>Continuous monitoring for security threats and vulnerabilities</p>
-                            </div>
-                        </div>
+        <section id="children">
+          <h2>12. Children’s privacy</h2>
+          <p>Linkker is not intended for children under 13. We do not knowingly collect personal information from children under 13. If we learn that we have, we will delete it.</p>
+        </section>
 
-                        <div class="security-item">
-                            <span class="material-icons">backup</span>
-                            <div>
-                                <h4>Backups</h4>
-                                <p>Regular encrypted backups to prevent data loss</p>
-                            </div>
-                        </div>
-                    </div>
+        <section id="website">
+          <h2>13. This website and cookies</h2>
+          <p>This website does not use cookies, analytics or advertising trackers. It loads fonts from Google Fonts, which means Google receives your IP address when you visit. The website is hosted by Vercel, which keeps standard server logs.</p>
+          <p>The Linkker apps and extension use local storage on your device to keep you signed in and remember your settings.</p>
+        </section>
 
-                    <h3>5.2 Data Breach Response</h3>
-                    <p>
-                        In the event of a data breach, we will notify affected users and relevant authorities 
-                        within 72 hours as required by applicable laws.
-                    </p>
-                </section>
+        <section id="regional">
+          <h2>14. Regional privacy laws</h2>
+          <h3>14.1 GDPR (European Economic Area and UK)</h3>
+          <p>We process your data to perform our contract with you (providing the Service), based on our legitimate interests (security, improvement), to comply with legal obligations, and with your consent where required. You have the right to lodge a complaint with your local supervisory authority.</p>
+          <h3>14.2 California (CCPA/CPRA)</h3>
+          <p>California residents have the right to know what personal information we collect, to request deletion, and to opt out of the sale or sharing of personal information. We do not sell personal information.</p>
+          <h3>14.3 India (DPDP Act)</h3>
+          <p>If you are in India, you may access, correct and erase your personal data and nominate another person to exercise your rights, by contacting us at the email below.</p>
+        </section>
 
-                <section class="legal-section">
-                    <h2>6. Your Privacy Rights</h2>
-                    
-                    <div class="rights-grid">
-                        <div class="right-card">
-                            <span class="material-icons">visibility</span>
-                            <h4>Access</h4>
-                            <p>Request a copy of your personal data we hold</p>
-                        </div>
+        <section id="changes">
+          <h2>15. Changes to this Privacy Policy</h2>
+          <p>We may update this Privacy Policy from time to time. We will post the updated policy on this page and change the “Last updated” date, and for material changes we will let you know in the app or by email. Continuing to use the Service after changes take effect means you accept the updated policy.</p>
+        </section>
 
-                        <div class="right-card">
-                            <span class="material-icons">edit</span>
-                            <h4>Correction</h4>
-                            <p>Request correction of inaccurate or incomplete data</p>
-                        </div>
+        <section id="contact">
+          <h2>16. Contact us</h2>
+          <p>Questions about this Privacy Policy or your data? Contact the developer, Nikhil Biju:</p>
+          <p><strong>Email:</strong> <a class="email-link" href="mailto:nikhilbiju6449@gmail.com">nikhilbiju6449@gmail.com</a></p>
+          <p>See also our <a href="/terms-of-service">Terms of Service</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
 
-                        <div class="right-card">
-                            <span class="material-icons">delete</span>
-                            <h4>Deletion</h4>
-                            <p>Request deletion of your personal data</p>
-                        </div>
-
-                        <div class="right-card">
-                            <span class="material-icons">file_download</span>
-                            <h4>Portability</h4>
-                            <p>Export your data in a machine-readable format</p>
-                        </div>
-
-                        <div class="right-card">
-                            <span class="material-icons">block</span>
-                            <h4>Objection</h4>
-                            <p>Object to certain processing of your data</p>
-                        </div>
-
-                        <div class="right-card">
-                            <span class="material-icons">pause</span>
-                            <h4>Restriction</h4>
-                            <p>Request restriction of data processing</p>
-                        </div>
-                    </div>
-
-                    <p>
-                        To exercise these rights, please contact us at <a href="mailto:privacy@linkker.app">privacy@linkker.app</a>. 
-                        We will respond to your request within 30 days.
-                    </p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>7. Data Retention</h2>
-                    
-                    <h3>7.1 Retention Periods</h3>
-                    <div class="retention-info">
-                        <div class="retention-item">
-                            <h4>Account Data</h4>
-                            <p>Retained for the lifetime of your account plus 30 days after deletion</p>
-                        </div>
-
-                        <div class="retention-item">
-                            <h4>Usage Data</h4>
-                            <p>Aggregated usage data retained for up to 2 years for analytics</p>
-                        </div>
-
-                        <div class="retention-item">
-                            <h4>Support Data</h4>
-                            <p>Customer support interactions retained for 3 years</p>
-                        </div>
-
-                        <div class="retention-item">
-                            <h4>Legal Data</h4>
-                            <p>Data required for legal compliance retained as required by law</p>
-                        </div>
-                    </div>
-
-                    <h3>7.2 Data Deletion</h3>
-                    <p>
-                        When you delete your account, we will delete your personal data within 30 days, 
-                        except where we are required to retain data for legal reasons.
-                    </p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>8. International Data Transfers</h2>
-                    <p>
-                        Your information may be transferred to and processed in countries other than your own. 
-                        We ensure appropriate safeguards are in place through:
-                    </p>
-                    <ul>
-                        <li>Standard Contractual Clauses approved by relevant authorities</li>
-                        <li>Adequacy decisions by data protection authorities</li>
-                        <li>Appropriate technical and organizational measures</li>
-                    </ul>
-                </section>
-
-                <section class="legal-section">
-                    <h2>9. Children's Privacy</h2>
-                    <p>
-                        Linkker is not intended for children under 13 years of age. We do not knowingly 
-                        collect personal information from children under 13. If we become aware that we 
-                        have collected personal information from a child under 13, we will take steps to 
-                        delete such information.
-                    </p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>10. Cookies and Tracking Technologies</h2>
-                    
-                    <h3>10.1 What We Use</h3>
-                    <div class="cookie-types">
-                        <div class="cookie-type">
-                            <h4>Essential Cookies</h4>
-                            <p>Required for the service to function (authentication, security)</p>
-                        </div>
-
-                        <div class="cookie-type">
-                            <h4>Analytics Cookies</h4>
-                            <p>Help us understand how you use our service (with your consent)</p>
-                        </div>
-
-                        <div class="cookie-type">
-                            <h4>Functional Cookies</h4>
-                            <p>Remember your preferences and settings</p>
-                        </div>
-                    </div>
-
-                    <h3>10.2 Managing Cookies</h3>
-                    <p>
-                        You can control cookies through your browser settings. However, disabling 
-                        essential cookies may affect the functionality of our service.
-                    </p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>11. Third-Party Services</h2>
-                    <p>
-                        Our service may contain links to third-party websites or integrate with 
-                        third-party services. This Privacy Policy does not apply to those third-party 
-                        services. We encourage you to review their privacy policies.
-                    </p>
-                    
-                    <h3>11.1 Third-Party Integrations</h3>
-                    <ul>
-                        <li>Google OAuth for authentication</li>
-                        <li>Cloud storage providers for data hosting</li>
-                        <li>Analytics services for usage insights</li>
-                        <li>Customer support platforms</li>
-                    </ul>
-                </section>
-
-                <section class="legal-section">
-                    <h2>12. Regional Privacy Laws</h2>
-                    
-                    <h3>12.1 GDPR (European Union)</h3>
-                    <p>
-                        If you are in the EU, you have additional rights under the General Data Protection 
-                        Regulation, including the right to lodge a complaint with a supervisory authority.
-                    </p>
-
-                    <h3>12.2 CCPA (California)</h3>
-                    <p>
-                        California residents have specific rights under the California Consumer Privacy Act, 
-                        including the right to know what personal information is collected and to opt-out 
-                        of the sale of personal information.
-                    </p>
-
-                    <h3>12.3 Other Jurisdictions</h3>
-                    <p>
-                        We comply with applicable privacy laws in all jurisdictions where we operate.
-                    </p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>13. Changes to This Privacy Policy</h2>
-                    <p>
-                        We may update this Privacy Policy from time to time. We will notify you of any 
-                        material changes by:
-                    </p>
-                    <ul>
-                        <li>Posting the updated policy on our website</li>
-                        <li>Sending you an email notification</li>
-                        <li>Providing in-app notifications</li>
-                    </ul>
-                    <p>
-                        Your continued use of the service after changes become effective constitutes 
-                        acceptance of the updated Privacy Policy.
-                    </p>
-                </section>
-
-                <section class="legal-section">
-                    <h2>14. Contact Us</h2>
-                    <p>
-                        If you have any questions about this Privacy Policy or our privacy practices, 
-                        please contact us:
-                    </p>
-                    <div class="contact-info">
-                        <div class="contact-method">
-                            <span class="material-icons">email</span>
-                            <div>
-                                <strong>Email:</strong>
-                                <a href="mailto:privacy@linkker.app">privacy@linkker.app</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <span class="material-icons">location_on</span>
-                            <div>
-                                <strong>Address:</strong>
-                                <p>[Your Business Address]<br>[City, State, Postal Code]</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-method">
-                            <span class="material-icons">phone</span>
-                            <div>
-                                <strong>Phone:</strong>
-                                <p>[Your Contact Number]</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p>
-                        <strong>Data Protection Officer:</strong> dpo@linkker.app
-                    </p>
-                </section>
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="legal-navigation">
-                <a href="terms-of-service.html" class="legal-nav-link">
-                    <span class="material-icons">description</span>
-                    Terms of Service
-                </a>
-                <a href="index.html" class="legal-nav-link">
-                    <span class="material-icons">home</span>
-                    Back to Home
-                </a>
-            </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="/"><img src="/assets/logo-tile.svg" alt="" width="36" height="36" loading="lazy">Linkker</a>
+          <p>Save links from anywhere, find them in seconds, and keep the private ones private.</p>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <div class="logo-container">
-                            <img src="linkker_logo.png" alt="Linkker Logo" class="logo">
-                        </div>
-                        <span class="brand-text">Linkker</span>
-                    </div>
-                    <p class="footer-description">
-                        Smart link management for the modern digital lifestyle. 
-                        Organize, search, and access your links effortlessly.
-                    </p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Legal</h4>
-                        <a href="terms-of-service.html">Terms of Service</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="#">Cookie Policy</a>
-                        <a href="#">DMCA</a>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Support</h4>
-                        <a href="#">Help Center</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#">Status</a>
-                        <a href="#">Community</a>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <a href="index.html#about">About</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Press</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; 2024 Linkker. All rights reserved.</p>
-                </div>
-            </div>
+        <div class="footer-col">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#download">Download</a></li>
+            <li><a href="/#pro">Linkker Pro</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
         </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
+        <div class="footer-col">
+          <h2>Help</h2>
+          <ul>
+            <li><a href="/support">Support</a></li>
+            <li><a href="mailto:nikhilbiju6449@gmail.com">Email us</a></li>
+            <li><a href="/delete-account">Delete account</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy" aria-current="page">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Linkker · Made by Nikhil Biju</span>
+        <a href="mailto:nikhilbiju6449@gmail.com">nikhilbiju6449@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
