@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your Linkker account</title>
+  <meta name="description" content="How to delete your Linkker account and data, in the app or by email request without the app. What is deleted, what is kept and how long it takes.">
+  <link rel="canonical" href="https://linker-landing-page.vercel.app/delete-account">
+  <meta name="theme-color" content="#fbf8f3">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Linkker">
+  <meta property="og:title" content="Delete your Linkker account">
+  <meta property="og:description" content="Delete your Linkker account in the app or request deletion by email.">
+  <meta property="og:url" content="https://linker-landing-page.vercel.app/delete-account">
+  <meta property="og:image" content="https://linker-landing-page.vercel.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="/assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Linkker home"><img src="/assets/logo-tile.svg" alt="" width="36" height="36">Linkker</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-menu" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg>
+        <svg class="i-close" aria-hidden="true"><use href="/assets/icons.svg#i-close"/></svg>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="/#features">Features</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/support">Support</a>
+        <a class="btn btn--primary btn--sm" href="/#download">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap wrap--narrow">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Delete account</span></nav>
+        <h1>Delete your Linkker account</h1>
+        <p class="lead">This page explains how to delete your account for <strong>Linkker</strong> (the iPhone app, the Android app <em>com.linkker.app</em> and the Chrome extension), developed by <strong>Nikhil Biju</strong>, and what happens to your data.</p>
+      </div>
+    </div>
+
+    <div class="wrap wrap--narrow prose" style="max-width:820px;padding-bottom:clamp(64px,9vw,112px)">
+      <section id="in-app" aria-labelledby="in-app-title">
+        <h2 id="in-app-title">Option 1: Delete your account in the app</h2>
+        <p>The quickest way. Deletion starts immediately and you’ll be signed out.</p>
+        <h3>On Android</h3>
+        <ol class="num-steps">
+          <li>Open the Linkker app and sign in</li>
+          <li>Tap <strong>Profile</strong></li>
+          <li>Tap <strong>Settings</strong></li>
+          <li>Tap <strong>Delete Account</strong> and confirm</li>
+        </ol>
+        <h3>On iPhone</h3>
+        <ol class="num-steps">
+          <li>Open the Linkker app and sign in</li>
+          <li>Tap <strong>Profile</strong></li>
+          <li>Tap <strong>Delete account</strong> and confirm</li>
+        </ol>
+        <div class="callout callout--warn">
+          <p><strong>Uninstalling the app does not delete your account.</strong> If you have a Linkker Pro subscription through the App Store or Google Play, cancel it in your store’s subscription settings as well. Deleting your account doesn’t stop store billing.</p>
+        </div>
+      </section>
+
+      <section id="request" aria-labelledby="request-title">
+        <h2 id="request-title">Option 2: Request deletion without the app</h2>
+        <p>No longer have the app installed? Fill in this form. It opens your email app with a pre-written request to <a href="mailto:nikhilbiju6449@gmail.com">nikhilbiju6449@gmail.com</a>. Please send it <strong>from the email address you use to sign in to Linkker</strong> so we can verify the account is yours. Nothing is sent until you press Send in your email app.</p>
+
+        <form id="deletion-form" class="form" data-to="nikhilbiju6449@gmail.com" novalidate>
+          <div class="field">
+            <label for="del-email">Account email</label>
+            <input class="input" id="del-email" name="email" type="email" autocomplete="email" required aria-describedby="del-email-hint">
+            <span class="hint" id="del-email-hint">The Google or Apple email you sign in to Linkker with. If you used “Hide My Email”, enter the Apple relay address.</span>
+          </div>
+          <div class="field">
+            <label for="del-confirm">Confirm account email</label>
+            <input class="input" id="del-confirm" name="confirm" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="del-scope">What should we delete?</label>
+            <select class="select" id="del-scope" name="scope">
+              <option value="Delete my entire account and all data">My entire account and all data</option>
+              <option value="Delete only my saved links and collections (keep my account)">Only my saved links and collections (keep my account)</option>
+              <option value="Remove my transfer devices only (keep my account)">Only my paired transfer devices (keep my account)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="del-platform">How did you sign in?</label>
+            <select class="select" id="del-platform" name="platform">
+              <option>Sign in with Google</option>
+              <option>Sign in with Apple</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="del-note">Anything else? <span class="hint">(optional)</span></label>
+            <textarea class="textarea" id="del-note" name="note" rows="3"></textarea>
+          </div>
+          <label class="check"><input type="checkbox" name="understand" required> I understand that deleting my account is permanent and my links can’t be recovered.</label>
+          <div id="deletion-msg" class="form-msg" role="status" tabindex="-1"></div>
+          <div>
+            <button class="btn btn--primary" type="submit"><svg aria-hidden="true"><use href="/assets/icons.svg#i-mail"/></svg>Open email to send request</button>
+          </div>
+        </form>
+        <noscript>
+          <p class="callout">JavaScript is off. Email <a href="mailto:nikhilbiju6449@gmail.com?subject=Linkker%20account%20deletion%20request&amp;body=Please%20delete%20my%20Linkker%20account.%0A%0AAccount%20email%3A%20">nikhilbiju6449@gmail.com</a> with the subject “Linkker account deletion request” and include your account email.</p>
+        </noscript>
+        <p class="muted">Prefer to write it yourself? Email <a href="mailto:nikhilbiju6449@gmail.com?subject=Linkker%20account%20deletion%20request">nikhilbiju6449@gmail.com</a> with the subject “Linkker account deletion request” and the email address on your account.</p>
+      </section>
+
+      <section id="what" aria-labelledby="what-title">
+        <h2 id="what-title">What gets deleted</h2>
+        <ul>
+          <li>Your account profile: name, email address, profile picture and sign-in identifiers</li>
+          <li>All saved links, notes, categories, collections and folders, including protected and “Not safe for work” links</li>
+          <li>Your settings and preferences</li>
+          <li>Paired transfer devices and their device records (name, local network address, online status)</li>
+          <li>Your subscription link to your account in our systems</li>
+        </ul>
+        <p>Files you sent with phone-to-computer transfer were never stored on our servers. Copies remain only on your own devices.</p>
+
+        <h2>What we keep, and for how long</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th scope="col">Data</th><th scope="col">Why</th><th scope="col">Kept for</th></tr></thead>
+            <tbody>
+              <tr><td>Payment and subscription records (transaction ID, date, amount, plan)</td><td>Required by tax and accounting laws; handling refunds and disputes</td><td>As long as the law requires (typically up to 8 years)</td></tr>
+              <tr><td>Encrypted backups</td><td>Disaster recovery</td><td>Overwritten within 90 days</td></tr>
+              <tr><td>Your deletion request email</td><td>Proof that we completed your request</td><td>Up to 3 years</td></tr>
+              <tr><td>Aggregated, anonymous statistics</td><td>Understanding overall usage</td><td>May be kept; it can’t identify you</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Purchase records held by Apple, Google, RevenueCat and Dodo Payments are also governed by their own policies.</p>
+
+        <h2>Timeline</h2>
+        <ul>
+          <li><strong>In-app deletion:</strong> your account is closed immediately and your data is erased from our live systems within 30 days.</li>
+          <li><strong>Email requests:</strong> we reply within 3 business days, verify that the request came from the account’s email address, and complete deletion within 30 days of verification.</li>
+          <li><strong>Backups:</strong> any remaining copies are removed within 90 days.</li>
+        </ul>
+        <p>Questions? Read our <a href="/privacy-policy">Privacy Policy</a> or <a href="/support">contact support</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="/"><img src="/assets/logo-tile.svg" alt="" width="36" height="36" loading="lazy">Linkker</a>
+          <p>Save links from anywhere, find them in seconds, and keep the private ones private.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="/#features">Features</a></li>
+            <li><a href="/#download">Download</a></li>
+            <li><a href="/#pro">Linkker Pro</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Help</h2>
+          <ul>
+            <li><a href="/support">Support</a></li>
+            <li><a href="mailto:nikhilbiju6449@gmail.com">Email us</a></li>
+            <li><a href="/delete-account" aria-current="page">Delete account</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Linkker · Made by Nikhil Biju</span>
+        <a href="mailto:nikhilbiju6449@gmail.com">nikhilbiju6449@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
