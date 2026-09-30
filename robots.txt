@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /checkout/
+Disallow: /c/
 
 Sitemap: https://linker-landing-page.vercel.app/sitemap.xml

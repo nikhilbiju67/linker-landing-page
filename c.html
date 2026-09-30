@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shared collection · Linkker</title>
+  <meta name="description" content="A collection shared on Linkker.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14101f" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Linkker">
+  <meta property="og:title" content="A collection shared on Linkker">
+  <meta property="og:description" content="Open the links in this collection, or get Linkker to keep your own links organised.">
+  <meta property="og:image" content="https://linker-landing-page.vercel.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A collection shared on Linkker">
+  <meta name="twitter:description" content="Open the links in this collection, or get Linkker to keep your own links organised.">
+  <meta name="twitter:image" content="https://linker-landing-page.vercel.app/assets/og-image.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/shared.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="/assets/site.js" defer></script>
+  <script src="/assets/shared.js" defer></script>
+</head>
+<body class="sc">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Linkker home"><img src="/assets/logo-tile.svg" alt="" width="36" height="36">Linkker</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="i-menu" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg>
+        <svg class="i-close" aria-hidden="true"><use href="/assets/icons.svg#i-close"/></svg>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="/#features">Features</a>
+        <a href="/#privacy">Privacy</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/support">Support</a>
+        <a class="btn btn--primary btn--sm" href="/#download">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="sc-main paper-dots">
+    <div class="wrap">
+      <section class="sc-head" aria-labelledby="sc-title">
+        <p class="eyebrow">
+          <svg aria-hidden="true"><use href="/assets/icons.svg#i-scribble-arrow"/></svg>
+          shared with you
+        </p>
+        <h1 id="sc-title" class="sc-name">Shared collection</h1>
+        <p id="sc-desc" class="lead sc-desc" hidden></p>
+        <p id="sc-meta" class="sc-meta" hidden></p>
+      </section>
+
+      <div id="sc-status" class="sc-status" role="status" aria-live="polite"></div>
+      <ul id="sc-list" class="sc-grid" aria-label="Links in this collection"></ul>
+      <div class="sc-more-row"><button id="sc-more" class="btn" type="button" hidden>Show more links</button></div>
+
+      <aside class="sc-cta card" aria-labelledby="sc-cta-title">
+        <div>
+          <h2 id="sc-cta-title">Keep your own links sorted</h2>
+          <p>Linkker saves links from your share sheet or Chrome, sorts them into smart categories, and lets you share a whole collection like this one with a single link.</p>
+        </div>
+        <div class="stores">
+          <a class="store" href="https://apps.apple.com/in/app/linkker/id6747974035" rel="noopener noreferrer" target="_blank">
+            <svg aria-hidden="true"><use href="/assets/icons.svg#i-phone"/></svg>
+            <span><small>Download for iPhone</small><strong>App Store</strong></span>
+            <span class="visually-hidden">(opens in a new tab)</span>
+          </a>
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.linkker.app" rel="noopener noreferrer" target="_blank">
+            <svg aria-hidden="true"><use href="/assets/icons.svg#i-android"/></svg>
+            <span><small>Get it for Android</small><strong>Google Play</strong></span>
+            <span class="visually-hidden">(opens in a new tab)</span>
+          </a>
+          <a class="store store--light" href="https://chromewebstore.google.com/detail/nbdnnigimoocchbceddjcnnbjpcoaplh" rel="noopener noreferrer" target="_blank">
+            <svg aria-hidden="true"><use href="/assets/icons.svg#i-browser"/></svg>
+            <span><small>Add to Chrome</small><strong>Chrome Web Store</strong></span>
+            <span class="visually-hidden">(opens in a new tab)</span>
+          </a>
+        </div>
+      </aside>
+
+      <p class="sc-note muted">Links in a shared collection are chosen by the person who shared it. Linkker never shows links they marked Not safe for work or protected. Only open links you trust.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="margin-top:0;border-top:0;padding-top:0">
+        <span>© <span data-year>2026</span> Linkker · Made by Nikhil Biju</span>
+        <a href="mailto:nikhilbiju6449@gmail.com">nikhilbiju6449@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
