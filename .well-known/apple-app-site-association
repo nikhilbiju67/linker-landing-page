@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TVRFNNARZ4.com.linkker.app"],
+        "components": [{ "/": "/c/*" }]
+      }
+    ]
+  }
+}

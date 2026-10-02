@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.linkker.app",
+      "sha256_cert_fingerprints": [
+        "D8:18:EF:98:1A:7E:14:60:D5:58:2C:95:98:59:08:1A:80:7D:D5:65:32:B2:31:5E:13:E6:8B:C6:E1:45:D2:2A",
+        "5C:EC:B5:A0:2E:73:9E:88:AE:0E:3C:1E:DA:E8:5D:24:7C:A4:FB:E6:F5:7E:EB:A5:83:6C:72:F8:98:4C:0D:DC"
+      ]
+    }
+  }
+]
