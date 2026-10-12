@@ -5,7 +5,7 @@ import datetime, pathlib, re, xml.sax.saxutils as x
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://linkker.space"
 TODAY = datetime.date.today().isoformat()
-STATIC = [("/", "weekly", "1.0"), ("/blog/", "daily", "0.8"), ("/support", "monthly", "0.6"),
+STATIC = [("/", "weekly", "1.0"), ("/blog", "daily", "0.8"), ("/support", "monthly", "0.6"),
           ("/privacy-policy", "yearly", "0.3"), ("/terms-of-service", "yearly", "0.3"),
           ("/delete-account", "yearly", "0.3")]
 
@@ -20,7 +20,7 @@ for f in sorted((ROOT / "blog").rglob("index.html")):
     rel = f.parent.relative_to(ROOT / "blog").as_posix()
     if rel == "." or rel.startswith("assets"):
         continue
-    urls.append((f"/blog/{rel}/", post_date(f.read_text(errors="ignore")), "monthly", "0.7"))
+    urls.append((f"/blog/{rel}", post_date(f.read_text(errors="ignore")), "monthly", "0.7"))
 
 body = "\n".join(
     f"  <url>\n    <loc>{SITE}{x.escape(u)}</loc>\n    <lastmod>{d}</lastmod>\n"

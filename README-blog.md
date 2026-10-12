@@ -1,5 +1,7 @@
 # The Linkker blog (linkker.space/blog)
 
+URLs have no trailing slash (`/blog`, `/blog/<slug>`), matching vercel.json `trailingSlash: false`.
+
 Hand-picked lists of free websites and AI tools, generated, checked and published
 automatically from the Oracle server (systemd timers, user `opc`).
 

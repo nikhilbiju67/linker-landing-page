@@ -30,7 +30,7 @@ def spec(fmt):
 
 def published(limit=15):
     es = sorted(entries(POSTS), key=lambda e: e[0].stat().st_mtime, reverse=True)[:limit]
-    return "\n".join(f'- "{fm["title"]}" -> /blog/{f.stem}/' for f, fm in es)
+    return "\n".join(f'- "{fm["title"]}" -> /blog/{f.stem}' for f, fm in es)
 
 
 def codex(prompt, schema=None, timeout=1800):

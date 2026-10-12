@@ -60,7 +60,7 @@ SLUG=$(basename "$NEXT" .md)
 say "publishing: $SLUG"
 if FORCE=1 "$ROOT/tools/publish.sh" "$SLUG" >> "$LOG" 2>&1; then
   say "done: $SLUG"
-  notify "Published: https://linkker.space/blog/$SLUG/"
+  notify "Published: https://linkker.space/blog/$SLUG"
 else
   say "FAILED: $SLUG (see above)"
   notify "Auto-publish failed for $SLUG - see content/logs/autopublish.log"

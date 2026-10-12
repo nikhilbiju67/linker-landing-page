@@ -21,7 +21,7 @@ def posts():
     for f, fm in entries(POSTS):
         out.append({"slug": f.stem, "title": fm["title"], "desc": fm.get("description", ""),
                     "date": str(fm.get("date", ""))[:10], "hero": fm.get("hero", ""),
-                    "kicker": fm.get("kicker", "Linkker picks"), "url": f"{SITE}/blog/{f.stem}/"})
+                    "kicker": fm.get("kicker", "Linkker picks"), "url": f"{SITE}/blog/{f.stem}"})
     return sorted(out, key=lambda p: (p["date"], p["slug"]), reverse=True)
 
 
@@ -48,7 +48,7 @@ def write_feed(ps):
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Linkker blog</title>
-    <link>{SITE}/blog/</link>
+    <link>{SITE}/blog</link>
     <atom:link href="{SITE}/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Hand-picked free websites and AI tools, and smarter ways to save the links that matter.</description>
     <language>en</language>
@@ -67,7 +67,7 @@ def write_llms(ps):
         "and files move between phone and computer over your own Wi-Fi.\n\n"
         "## Pages\n- [Home](https://linkker.space/): what Linkker does and where to get it\n"
         "- [Support](https://linkker.space/support): help and contact\n"
-        "- [Blog](https://linkker.space/blog/): hand-picked free websites and AI tools\n")
+        "- [Blog](https://linkker.space/blog): hand-picked free websites and AI tools\n")
     block = (f"{START}\n## Articles\nHand-picked lists of free websites and tools. Each page opens with "
              "quick picks, then one honest card per site.\n\n"
              + "\n".join(f"- [{a['title']}]({a['url']}): {a['desc']}" for a in ps) + f"\n{END}")
@@ -86,7 +86,7 @@ def write_homepage(ps, n=3):
         text = re.sub(r"\n\s*" + re.escape(HOME_START) + r".*?" + re.escape(HOME_END), "", text, flags=re.S)
         p.write_text(text); return
     e = html.escape
-    cards = "\n".join(f"""          <li><a class="post-card" href="/blog/{a['slug']}/">
+    cards = "\n".join(f"""          <li><a class="post-card" href="/blog/{a['slug']}">
             <img src="/blog{e(a['hero'])}" alt="" width="1200" height="630" loading="lazy" decoding="async">
             <span class="pc-body"><small>{e(a['kicker'])}</small><b>{e(a['title'])}</b></span>
           </a></li>""" for a in ps[:n])
@@ -98,7 +98,7 @@ def write_homepage(ps, n=3):
       <ul class="post-grid" style="margin:28px 0 18px">
 {cards}
       </ul>
-      <a class="btn" href="/blog/">See every list</a>
+      <a class="btn" href="/blog">See every list</a>
     </section>
     {HOME_END}"""
     if HOME_START in text:

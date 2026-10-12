@@ -49,7 +49,7 @@ if ! OUT=$(vercel deploy --prod --yes 2>&1); then
   echo "DEPLOY FAILED - draft restored"; exit 1
 fi
 echo "$OUT" | grep -E '^(Production|✅|https://)' | tail -2 || true
-echo "live: https://linkker.space/blog/${SLUG:+$SLUG/}"
+echo "live: https://linkker.space/blog${SLUG:+/$SLUG}"
 
 if [ "${BLOG_GIT_PUSH:-0}" = 1 ]; then
   git add -A
@@ -57,6 +57,6 @@ if [ "${BLOG_GIT_PUSH:-0}" = 1 ]; then
     || echo "WARNING: git push failed - the site is live but the commit is only on this machine"
 fi
 
-URLS="/ /blog/ /blog/feed.xml /sitemap.xml /llms.txt"
-[ -n "$SLUG" ] && URLS="/blog/$SLUG/ $URLS"
+URLS="/ /blog /blog/feed.xml /sitemap.xml /llms.txt"
+[ -n "$SLUG" ] && URLS="/blog/$SLUG $URLS"
 python3 tools/discover.py ping $URLS || true

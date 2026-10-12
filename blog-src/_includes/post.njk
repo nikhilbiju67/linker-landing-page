@@ -2,10 +2,10 @@
 layout: base.njk
 ---
 {% set parts = content.split("<!-- picks -->") %}
-{% set url = site.url + "/blog" + page.url %}
+{% set url = site.url + (page.url | blogUrl) %}
 <article class="post">
   <header class="wrap wrap--narrow post-head">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>{{ kicker or "Linkker picks" }}</span></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog">Blog</a><span aria-hidden="true">/</span><span>{{ kicker or "Linkker picks" }}</span></nav>
     <h1>{{ title }}</h1>
     <p class="meta">By the Linkker team · <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% if updated %} · updated <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time>{% endif %} · {{ readingTime or 5 }} min read</p>
   </header>
@@ -70,7 +70,7 @@ layout: base.njk
     <nav class="related" aria-label="Related reading">
       <p class="hand">Keep exploring</p>
       <ul>
-        {% for p in rel %}<li><a href="/blog{{ p.url }}">{{ p.data.title }}</a></li>
+        {% for p in rel %}<li><a href="{{ p.url | blogUrl }}">{{ p.data.title }}</a></li>
         {% endfor %}
       </ul>
     </nav>
@@ -105,7 +105,7 @@ layout: base.njk
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Linkker", "item": "{{ site.url }}/"},
-        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog"},
         {"@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": "{{ url }}"}
       ]
     }

@@ -9,6 +9,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("domain", (u) => {
     try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; }
   });
+  // linkker.space serves pages without a trailing slash: "/blog" + "/slug/" -> "/blog/slug".
+  eleventyConfig.addFilter("blogUrl", (u) => ("/blog" + (u || "/")).replace(/\/+$/, ""));
   eleventyConfig.addFilter("md", (s) => (s ? md.render(String(s)) : ""));
   eleventyConfig.addFilter("mdInline", (s) => (s ? md.renderInline(String(s)) : ""));
 
