@@ -1,0 +1,86 @@
+/* The Linkker blog: article + list pages. Builds on site.css tokens. */
+.blog-head { padding-block: clamp(40px, 7vw, 88px) 28px; }
+.blog-head h1, .blog-head .lead { max-width: 860px; }
+.blog-head h1 { font-size: var(--step-4); line-height: 1.04; letter-spacing: -.03em; margin: 10px 0 16px; }
+.blog-head .lead { color: var(--ink-2); font-size: var(--step-1); max-width: 640px; }
+.mark { background: linear-gradient(transparent 58%, var(--lav) 58%, var(--lav) 92%, transparent 92%); }
+
+.post-grid { list-style: none; margin: 0 0 80px; padding: 0; display: grid; gap: 28px; grid-template-columns: repeat(3, 1fr); }
+.post-card { display: flex; flex-direction: column; height: 100%; background: var(--card); color: var(--ink);
+  border: 2px solid var(--ink); border-radius: var(--radius); box-shadow: 4px 5px 0 var(--ink); overflow: hidden;
+  text-decoration: none; transition: transform .18s, box-shadow .18s; }
+.post-card:hover { transform: translate(-2px, -3px); box-shadow: 6px 8px 0 var(--ink); }
+.post-card img { display: block; width: 100%; height: auto; aspect-ratio: 1.905; object-fit: cover; border-bottom: 2px solid var(--ink); }
+.pc-body { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px 22px; }
+.pc-body small { color: var(--muted); font-weight: 700; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; }
+.pc-body b { font-size: var(--step-1); line-height: 1.25; letter-spacing: -.01em; }
+.pc-desc { color: var(--ink-2); font-size: .95rem; }
+@media (max-width: 960px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .post-grid { grid-template-columns: 1fr; } }
+
+.post-head { padding-top: clamp(28px, 5vw, 56px); }
+.post-head h1 { font-size: var(--step-3); line-height: 1.1; letter-spacing: -.025em; margin: 6px 0 14px; }
+.post-head .meta { color: var(--muted); font-size: .95rem; margin: 0 0 22px; }
+.post-hero { margin-block: 0 28px; }
+.post-hero img { display: block; width: 100%; height: auto; border: 2px solid var(--ink); border-radius: var(--radius); box-shadow: 4px 5px 0 var(--ink); background: var(--paper-2); }
+
+.post-body { padding-bottom: 72px; font-size: 1.08rem; line-height: 1.72; }
+.post-body > p, .post-body > ul, .post-body > ol:not(.picks) { color: var(--ink-2); }
+.post-body h2 { font-size: var(--step-2); line-height: 1.2; letter-spacing: -.02em; margin: 44px 0 12px; }
+.post-body h3 { font-size: var(--step-1); margin: 28px 0 8px; }
+.post-body a:not(.btn) { color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.post-body strong { color: var(--ink); }
+.post-body table { width: 100%; border-collapse: collapse; margin: 18px 0 26px; font-size: .96rem; background: var(--card);
+  border: 2px solid var(--ink); border-radius: 12px; overflow: hidden; }
+.post-body th, .post-body td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.post-body th { background: var(--lav-3); }
+.post-body .table-wrap { overflow-x: auto; }
+
+.hand { font-family: var(--font-hand); font-weight: 700; font-size: 1.6rem; line-height: 1; color: var(--brand); margin: 0 0 10px; }
+
+.quick { background: var(--butter); border: 2px solid var(--ink); border-radius: var(--radius); box-shadow: 3px 4px 0 var(--ink);
+  padding: 20px 24px 14px; margin: 26px 0 34px; transform: rotate(-.4deg); }
+.quick .hand { color: var(--ink); }
+.quick ol { margin: 0; padding-left: 1.3em; }
+.quick li { margin-bottom: 6px; color: var(--ink); }
+.quick a { font-weight: 700; color: var(--ink) !important; }
+
+.picks { list-style: none; margin: 0; padding: 0; counter-reset: none; }
+.pick { position: relative; background: var(--card); border: 2px solid var(--ink); border-radius: var(--radius);
+  box-shadow: 4px 5px 0 var(--ink); padding: 22px 24px 22px; margin: 0 0 30px; scroll-margin-top: 90px; }
+.pick:nth-child(4n+1) { --tint: var(--lav-2); }
+.pick:nth-child(4n+2) { --tint: var(--mint); }
+.pick:nth-child(4n+3) { --tint: var(--peach); }
+.pick:nth-child(4n+4) { --tint: var(--sky); }
+.pick-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.pick .num { flex: none; width: 38px; height: 38px; display: grid; place-items: center; border: 2px solid var(--ink);
+  border-radius: 50%; background: var(--tint); font-weight: 800; font-size: 1.05rem; }
+.fav { flex: none; width: 44px; height: 44px; border-radius: 12px; border: 2px solid var(--ink); background: #fff; object-fit: contain; padding: 5px; box-sizing: border-box; }
+.fav--letter { display: grid; place-items: center; background: var(--tint); font-weight: 800; font-size: 1.2rem; }
+.pick-name { min-width: 0; flex: 1; }
+.pick h2 { margin: 0; font-size: var(--step-1); line-height: 1.2; letter-spacing: -.01em; }
+.pick .dom { font-size: .88rem; font-weight: 600; color: var(--muted) !important; text-decoration: none !important; }
+.pick .price { flex: none; align-self: flex-start; font-size: .78rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase;
+  padding: 4px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--tint); white-space: nowrap; }
+.pick .one { font-weight: 700; color: var(--ink); margin: 6px 0 8px; }
+.pick p { color: var(--ink-2); margin: 0 0 12px; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0 16px; }
+.facts div { background: var(--paper); border: 1.5px dashed var(--line); border-radius: 12px; padding: 10px 12px; }
+.facts dt { font-family: var(--font-hand); font-size: 1.25rem; line-height: 1; color: var(--brand); margin-bottom: 4px; }
+.facts dd { margin: 0; font-size: .95rem; color: var(--ink); }
+.visit { margin-top: 2px; }
+@media (max-width: 620px) {
+  .pick { padding: 18px 16px; }
+  .pick-head { flex-wrap: wrap; }
+  .pick .price { order: 5; margin-left: 52px; }
+  .facts { grid-template-columns: 1fr; }
+}
+
+.save-cta { margin: 48px 0 36px; padding: 28px 26px; background: var(--lav-2); border: 2px solid var(--ink); border-radius: var(--radius);
+  box-shadow: 4px 5px 0 var(--ink); }
+.save-cta h2 { margin: 0 0 8px !important; font-size: var(--step-2); }
+.save-cta p { color: var(--ink-2); }
+.save-cta .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+.related ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.related a { font-weight: 700; }

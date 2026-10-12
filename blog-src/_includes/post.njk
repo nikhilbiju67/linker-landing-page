@@ -1,0 +1,114 @@
+---
+layout: base.njk
+---
+{% set parts = content.split("<!-- picks -->") %}
+{% set url = site.url + "/blog" + page.url %}
+<article class="post">
+  <header class="wrap wrap--narrow post-head">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/blog/">Blog</a><span aria-hidden="true">/</span><span>{{ kicker or "Linkker picks" }}</span></nav>
+    <h1>{{ title }}</h1>
+    <p class="meta">By the Linkker team · <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% if updated %} · updated <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time>{% endif %} · {{ readingTime or 5 }} min read</p>
+  </header>
+  {% if hero %}
+  <figure class="wrap wrap--narrow post-hero">
+    <img src="/blog{{ hero }}" alt="{{ heroAlt }}" width="1200" height="630" fetchpriority="high" decoding="async">
+  </figure>
+  {% endif %}
+
+  <div class="wrap wrap--narrow post-body">
+    {{ parts[0] | safe }}
+
+    {% if items and items.length %}
+    <aside class="quick" aria-label="Quick picks">
+      <p class="hand">Quick picks</p>
+      <ol>
+        {% for it in items %}<li><a href="#pick-{{ loop.index }}">{{ it.name }}</a>: {{ it.bestFor }}</li>
+        {% endfor %}
+      </ol>
+    </aside>
+
+    <ol class="picks">
+      {% for it in items %}
+      <li class="pick" id="pick-{{ loop.index }}">
+        <div class="pick-head">
+          <span class="num" aria-hidden="true">{{ loop.index }}</span>
+          {% if it.fav %}<img class="fav" src="/blog/assets/fav/{{ it.fav }}" alt="" width="44" height="44" loading="lazy" decoding="async">
+          {% else %}<span class="fav fav--letter" aria-hidden="true">{{ it.name | first | upper }}</span>{% endif %}
+          <div class="pick-name">
+            <h2>{{ it.name }}</h2>
+            <a class="dom" href="{{ it.url }}" rel="noopener" target="_blank">{{ it.url | domain }}</a>
+          </div>
+          {% if it.price %}<span class="price">{{ it.price }}</span>{% endif %}
+        </div>
+        <p class="one">{{ it.oneLiner }}</p>
+        {{ it.body | md | safe }}
+        <dl class="facts">
+          <div><dt>Best for</dt><dd>{{ it.bestFor }}</dd></div>
+          {% if it.catch %}<div><dt>The catch</dt><dd>{{ it.catch }}</dd></div>{% endif %}
+        </dl>
+        <a class="btn btn--sm visit" href="{{ it.url }}" rel="noopener" target="_blank">Visit {{ it.url | domain }} <span aria-hidden="true">↗</span></a>
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    {{ parts[1] | safe }}
+
+    <aside class="save-cta">
+      <p class="hand">Found a few keepers?</p>
+      <h2>Save them before they vanish into your tabs.</h2>
+      <p>Linkker saves any link from Chrome, your iPhone or your Android phone, sorts it into smart categories, and finds it again in seconds.</p>
+      <div class="btns">
+        <a class="btn btn--primary" href="{{ site.chrome }}" rel="noopener">Add to Chrome</a>
+        <a class="btn" href="{{ site.ios }}" rel="noopener">iPhone</a>
+        <a class="btn" href="{{ site.android }}" rel="noopener">Android</a>
+      </div>
+    </aside>
+
+    {% set rel = collections.posts | related(page.url) %}
+    {% if rel.length %}
+    <nav class="related" aria-label="Related reading">
+      <p class="hand">Keep exploring</p>
+      <ul>
+        {% for p in rel %}<li><a href="/blog{{ p.url }}">{{ p.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": {{ title | dump | safe }},
+      "description": {{ description | dump | safe }},
+      "image": ["{{ site.url }}/blog{{ hero }}"],
+      "datePublished": "{{ date | isoDate }}",
+      "dateModified": "{{ (updated or date) | isoDate }}",
+      "author": {"@type": "Organization", "name": "Linkker", "url": "{{ site.url }}/"},
+      "publisher": {"@type": "Organization", "name": "Linkker",
+        "logo": {"@type": "ImageObject", "url": "{{ site.url }}/assets/icon-512.png"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "{{ url }}"}
+    }{% if items and items.length %},
+    {
+      "@type": "ItemList",
+      "name": {{ title | dump | safe }},
+      "numberOfItems": {{ items.length }},
+      "itemListElement": [{% for it in items %}
+        {"@type": "ListItem", "position": {{ loop.index }}, "name": {{ it.name | dump | safe }}, "url": {{ it.url | dump | safe }}}{% if not loop.last %},{% endif %}{% endfor %}
+      ]
+    }{% endif %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Linkker", "item": "{{ site.url }}/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/"},
+        {"@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": "{{ url }}"}
+      ]
+    }
+  ]
+}
+</script>

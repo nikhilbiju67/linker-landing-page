@@ -1,0 +1,10 @@
+# The blog pipeline lives in the repo but is never served; /blog/ is prebuilt.
+blog-src/
+tools/
+content/
+node_modules/
+package.json
+package-lock.json
+eleventy.config.js
+README-blog.md
+.DS_Store

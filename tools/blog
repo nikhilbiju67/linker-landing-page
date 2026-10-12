@@ -1,0 +1,94 @@
+#!/bin/sh
+# Linkker blog control. Run `tools/blog` with no args for help.
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.npm-global/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+SELF="$0"
+while [ -L "$SELF" ]; do
+  LINK="$(readlink "$SELF")"
+  case "$LINK" in /*) SELF="$LINK" ;; *) SELF="$(dirname "$SELF")/$LINK" ;; esac
+done
+ROOT="$(cd "$(dirname "$SELF")/.." && pwd)"
+D="$ROOT/content/drafts"
+CMD="$1"; shift 2>/dev/null
+
+case "$CMD" in
+  new|generate)
+    mkdir -p "$ROOT/content/logs"
+    echo "=== $(date +%F) blog new $(date +%H:%M)"
+    n=$(ls "$D"/*.md 2>/dev/null | grep -vc '/_' || true)
+    if [ "${n:-0}" -ge 2 ]; then echo "2+ drafts already waiting - skipping"; exit 0; fi
+    python3 "$ROOT/tools/generate.py" ;;
+
+  trends)
+    python3 "$ROOT/tools/trends.py" | python3 -c '
+import json,sys
+for c in json.load(sys.stdin)["candidates"][:20]:
+    print(f"  {c[\"score\"]:>4}  {c[\"format\"]:<14} {c[\"query\"]}")' ;;
+
+  topic)
+    python3 "$ROOT/tools/pick_topic.py" ;;
+
+  list|ls)
+    n=0
+    for f in "$D"/*.md; do
+      [ -f "$f" ] || continue; n=$((n+1))
+      s=$(basename "$f" .md)
+      t=$(grep -m1 '^title:' "$f" | sed 's/^title: *"//; s/"$//')
+      a=$(( ( $(date +%s) - $(stat -f %m "$f" 2>/dev/null || stat -c %Y "$f") ) / 3600 ))
+      printf "  %s\n    %s · waiting %sh\n" "$t" "$s" "$a"
+    done
+    [ "$n" = 0 ] && echo "No drafts waiting." ;;
+
+  check)
+    [ -z "$1" ] && { echo "usage: blog check <slug>"; exit 2; }
+    python3 "$ROOT/tools/check_draft.py" "$D/$1.md" --links && echo "passes" ;;
+
+  approve|publish)
+    [ -z "$1" ] && { echo "usage: blog approve <slug|next>"; exit 2; }
+    "$ROOT/tools/publish.sh" "$1" ;;
+
+  rebuild)
+    "$ROOT/tools/publish.sh" rebuild ;;
+
+  reject|rm)
+    [ -z "$1" ] && { echo "usage: blog reject <slug>"; exit 2; }
+    rm -f "$D/$1.md" "$ROOT/blog-src/assets/$1.jpg" && echo "rejected $1" ;;
+
+  held)
+    for f in "$ROOT"/content/held/*.md; do
+      [ -f "$f" ] || { echo "Nothing held."; break; }
+      echo "$(basename "$f" .md):"; cat "${f%.md}.reasons.txt" 2>/dev/null
+    done ;;
+
+  auto)
+    FLAG="$ROOT/content/.autopublish-off"
+    case "$1" in
+      off) : > "$FLAG"; echo "auto-publish paused - drafts will wait for you" ;;
+      on)  rm -f "$FLAG"; echo "auto-publish on - one draft goes live each evening" ;;
+      ""|status)
+        if [ -f "$FLAG" ]; then echo "auto-publish: OFF (paused)"
+        elif systemctl is-enabled -q linkker-blog-publish.timer 2>/dev/null; then echo "auto-publish: ON (server timer)"
+        else echo "auto-publish: no timer on this machine"; fi
+        tail -3 "$ROOT/content/logs/autopublish.log" 2>/dev/null | sed 's/^/  /' ;;
+      *) echo "usage: blog auto [on|off|status]"; exit 2 ;;
+    esac ;;
+
+  report)
+    python3 "$ROOT/tools/gsc.py" ;;
+
+  *)
+    cat <<'EOF'
+Linkker blog
+  blog new                 pick a topic, write a draft + cover (content/drafts/)
+  blog topic               show which topic would be picked next, and why
+  blog trends              live Google demand the picker sees
+  blog list                drafts waiting
+  blog check <slug>        run the quality gate (links re-checked live)
+  blog approve <slug|next> publish now (gate, build, Vercel, IndexNow)
+  blog reject <slug>       delete a draft
+  blog held                drafts the gate held back, with reasons
+  blog rebuild             rebuild + redeploy the blog without a new post
+  blog auto [on|off]       pause / resume the evening auto-publish
+  blog report              Search Console numbers for linkker.space
+EOF
+    ;;
+esac

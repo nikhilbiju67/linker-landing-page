@@ -1,3 +1,9 @@
 .DS_Store
 .vercel
 node_modules
+content/drafts/
+content/held/
+content/logs/
+content/trends.json
+content/.autopublish-off
+tools/__pycache__/

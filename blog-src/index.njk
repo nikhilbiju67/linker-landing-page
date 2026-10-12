@@ -1,0 +1,38 @@
+---
+layout: base.njk
+permalink: /index.html
+title: "The Linkker blog: useful websites, free tools and smarter saving"
+seoTitle: "Linkker blog: the best free websites, AI tools and link-saving tips"
+noSuffix: true
+description: "Hand-picked lists of genuinely useful free websites and AI tools, plus practical ways to save, sort and find the links that matter."
+---
+<section class="wrap blog-head">
+  <p class="eyebrow">The Linkker blog</p>
+  <h1>Useful corners of the internet, <span class="mark">worth saving.</span></h1>
+  <p class="lead">Hand-picked free websites and AI tools that do one job well, and practical ways to keep track of the good links you find.</p>
+</section>
+
+<section class="wrap">
+  {% if collections.posts.length %}
+  <ul class="post-grid">
+    {% for p in collections.posts %}
+    <li>
+      <a class="post-card" href="/blog{{ p.url }}">
+        {% if p.data.hero %}<img src="/blog{{ p.data.hero }}" alt="" width="1200" height="630" loading="{{ 'eager' if loop.index < 4 else 'lazy' }}" decoding="async">{% endif %}
+        <span class="pc-body">
+          <small>{{ p.data.kicker or "Linkker picks" }} · {{ p.date | readableDate }}</small>
+          <b>{{ p.data.title }}</b>
+          <span class="pc-desc">{{ p.data.description }}</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="lead">The first lists are on their way.</p>
+  {% endif %}
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"The Linkker blog","url":"{{ site.url }}/blog/",
+ "publisher":{"@type":"Organization","name":"Linkker","url":"{{ site.url }}/"}}
+</script>

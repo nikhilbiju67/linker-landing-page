@@ -1,0 +1,13 @@
+{
+  "name": "linkker-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "blog": "eleventy",
+    "blog:serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "puppeteer-core": "^25.12.0"
+  }
+}

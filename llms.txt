@@ -1,0 +1,15 @@
+# Linkker
+
+> Linkker saves links from anywhere (Chrome, iPhone, Android), sorts them into smart AI categories and finds them in seconds. Private links can sit behind a PIN or biometrics, and links and files move between phone and computer over your own Wi-Fi.
+
+## Pages
+- [Home](https://linkker.space/): what Linkker does and where to get it
+- [Support](https://linkker.space/support): help and contact
+- [Blog](https://linkker.space/blog/): hand-picked free websites and AI tools
+
+<!-- articles:start -->
+## Articles
+Hand-picked lists of free websites and tools. Each page opens with quick picks, then one honest card per site.
+
+
+<!-- articles:end -->

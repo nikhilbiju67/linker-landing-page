@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "description", "intro", "items", "outro", "readingTime", "heroLine"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "maxLength": 70,
+      "description": "Article title, contains the target query naturally. List posts put the number of items first, e.g. '9 best free PDF editors that need no install'."
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 160,
+      "description": "Meta description: one sentence on what the reader gets, no title repetition."
+    },
+    "intro": {
+      "type": "string",
+      "description": "Markdown, 2 short paragraphs, no headings. First sentence answers what the list is for and who it suits."
+    },
+    "items": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 14,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "url", "oneLiner", "body", "bestFor", "price", "catch"],
+        "properties": {
+          "name": {"type": "string", "maxLength": 40, "description": "The site or tool's own name."},
+          "url": {"type": "string", "description": "Official https URL of the site or the tool's own page. No redirects, affiliates or shorteners."},
+          "oneLiner": {"type": "string", "maxLength": 110, "description": "What it does, in one plain sentence."},
+          "body": {"type": "string", "description": "Markdown, 40-110 words: what it is good at, one standout detail, who should use it. No headings."},
+          "bestFor": {"type": "string", "maxLength": 70, "description": "Short phrase: the job or person it suits best."},
+          "price": {"type": "string", "enum": ["Free", "Free plan", "Free & open source", "Free with ads"]},
+          "catch": {"type": "string", "maxLength": 120, "description": "The honest limitation in plain words (watermark, sign-up, daily cap, file size...). No prices."}
+        }
+      }
+    },
+    "outro": {
+      "type": "string",
+      "description": "Markdown that follows the list, starting at an H2 (##). Follows the format spec. No closing call-to-action."
+    },
+    "readingTime": {"type": "integer", "minimum": 3, "maximum": 15},
+    "heroLine": {
+      "type": "string",
+      "maxLength": 34,
+      "description": "A short handwritten-style note for the cover image, lowercase, e.g. 'no watermark, no sign-up'."
+    }
+  }
+}

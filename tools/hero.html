@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: "Jakarta"; src: url("fonts/jakarta-var.woff2") format("woff2"); font-weight: 200 800; }
+  @font-face { font-family: "Caveat"; src: url("fonts/caveat-700.woff2") format("woff2"); font-weight: 700; }
+  :root { --paper:#fbf8f3; --ink:#1d1530; --ink2:#463d5c; --brand:#7c3aed; --lav:#d2beff; --lav2:#ede4ff;
+          --mint:#bde8cf; --peach:#f9c9a7; --sky:#bfd7f5; --butter:#fbe7a1; --pink:#f6c1cf; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { background: var(--paper); background-image: radial-gradient(#e2d9cb 1.7px, transparent 1.8px);
+         background-size: 26px 26px; font-family: "Jakarta", sans-serif; color: var(--ink); position: relative; }
+  .left { position: absolute; left: 64px; top: 58px; width: 640px; height: 514px; display: flex; flex-direction: column; }
+  .kicker { align-self: flex-start; font-weight: 800; font-size: 19px; letter-spacing: .06em; text-transform: uppercase;
+            border: 2.5px solid var(--ink); border-radius: 999px; background: var(--lav2); padding: 7px 16px;
+            box-shadow: 3px 3px 0 var(--ink); }
+  h1 { font-weight: 800; letter-spacing: -.035em; line-height: 1.03; margin-top: 26px; font-size: 70px; }
+  h1 .n { background: linear-gradient(transparent 55%, var(--lav) 55%, var(--lav) 94%, transparent 94%); padding: 0 4px; }
+  .note { font-family: "Caveat"; font-size: 40px; color: var(--brand); margin-top: 18px; transform: rotate(-2deg);
+          transform-origin: left; display: flex; align-items: center; gap: 10px; }
+  .note svg { width: 54px; height: 30px; flex: none; }
+  .foot { margin-top: auto; display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 22px; }
+  .foot img { width: 44px; height: 44px; }
+  .foot span { color: var(--ink2); font-weight: 600; }
+  .stack { position: absolute; right: 62px; top: 122px; width: 400px; height: 460px; }
+  .card { position: absolute; left: 0; width: 380px; height: 92px; background: #fff; border: 2.5px solid var(--ink);
+          border-radius: 18px; box-shadow: 6px 7px 0 var(--ink); display: flex; align-items: center; gap: 16px; padding: 0 18px; }
+  .card .ic { width: 56px; height: 56px; border-radius: 14px; border: 2.5px solid var(--ink); background: var(--t);
+              display: grid; place-items: center; overflow: hidden; flex: none; }
+  .card .ic img { width: 40px; height: 40px; object-fit: contain; }
+  .card .ic b { font-size: 26px; font-weight: 800; }
+  .card .d { font-weight: 800; font-size: 25px; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; }
+  .card .go { font-size: 26px; font-weight: 800; color: var(--brand); }
+  .badge { position: absolute; right: -22px; top: -108px; width: 124px; height: 124px; border-radius: 50%;
+           background: var(--butter); border: 2.5px solid var(--ink); box-shadow: 4px 5px 0 var(--ink);
+           display: grid; place-items: center; text-align: center; transform: rotate(8deg); z-index: 10; }
+  .badge b { display: block; font-size: 50px; line-height: .9; font-weight: 800; letter-spacing: -.04em; }
+  .badge i { font-family: "Caveat"; font-style: normal; font-size: 27px; line-height: 1; }
+</style></head>
+<body>
+  <div class="left">
+    <div class="kicker" id="kicker"></div>
+    <h1 id="title"></h1>
+    <div class="note" id="note"><svg viewBox="0 0 54 30" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"><path d="M3 22c14-1 30-6 44-16"/><path d="M36 5l11 1-4 10"/></svg><span></span></div>
+    <div class="foot"><img src="../assets/logo-tile.svg" alt="">Linkker <span>· linkker.space/blog</span></div>
+  </div>
+  <div class="stack" id="stack"><div class="badge"><div><b id="count"></b><i>free picks</i></div></div></div>
+<script>
+  const D = JSON.parse(decodeURIComponent(location.hash.slice(1)));
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  document.getElementById("kicker").textContent = D.kicker || "Linkker picks";
+  document.getElementById("title").innerHTML = esc(D.title).replace(/^(\d+)/, '<span class="n">$1</span>');
+  const note = document.getElementById("note");
+  if (D.note) note.querySelector("span").textContent = D.note; else note.remove();
+  document.getElementById("count").textContent = D.count;
+  const tints = ["var(--lav2)", "var(--mint)", "var(--peach)", "var(--sky)"], rot = [-3, 2.2, -1.4, 2.8], dx = [24, 0, 30, 6];
+  const stack = document.getElementById("stack");
+  (D.sites || []).slice(0, 4).forEach((s, i) => {
+    const c = document.createElement("div");
+    c.className = "card";
+    c.style.cssText = `top:${i * 104}px;left:${dx[i]}px;transform:rotate(${rot[i]}deg);--t:${tints[i]};z-index:${5 - i}`;
+    c.innerHTML = `<div class="ic">${s.fav ? `<img src="file://${esc(s.fav)}" onerror="this.outerHTML='<b>${esc(s.domain[0].toUpperCase())}</b>'">` : `<b>${esc(s.domain[0].toUpperCase())}</b>`}</div>`
+      + `<div class="d">${esc(s.domain)}</div><div class="go">↗</div>`;
+    stack.appendChild(c);
+  });
+  // Shrink the title until it fits its box.
+  const h1 = document.getElementById("title");
+  let size = 70;
+  const room = () => 330 - (D.note ? 0 : -40);
+  while ((h1.scrollHeight > room() || h1.scrollWidth > 640) && size > 40) { size -= 2; h1.style.fontSize = size + "px"; }
+  document.fonts.ready.then(() => { window.READY = true; });
+</script>
+</body></html>
