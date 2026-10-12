@@ -11,8 +11,10 @@ cd "$ROOT"
 mkdir -p content/logs
 [ -z "$1" ] && { echo "usage: publish.sh <slug|next|rebuild>"; exit 2; }
 
-if [ "${BLOG_GIT_PUSH:-0}" = 1 ]; then
+if [ "${BLOG_GIT_PUSH:-0}" = 1 ] && [ -z "${BLOG_PULLED:-}" ]; then
   git pull -q --rebase --autostash || { echo "git pull failed - not publishing"; exit 1; }
+  # The pull may have replaced this very script mid-run; start again from the new copy.
+  BLOG_PULLED=1 exec sh "$ROOT/tools/publish.sh" "$@"
 fi
 
 SLUG=""
