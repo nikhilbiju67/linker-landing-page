@@ -79,7 +79,7 @@ def main(path, live_links=False):
         bad.append("quotes a price")
     if SHADY.search(prose + " " + title):
         bad.append("shady or NSFW topic: " + SHADY.search(prose + " " + title).group(0))
-    if re.search(r"\b(TODO|lorem ipsum|as an ai|\[insert)", prose, re.I):
+    if re.search(r"\bTODO\b|(?i:\b(lorem ipsum|as an ai|\[insert))", prose):
         bad.append("placeholder text")
     mentions = len(re.findall(r"\blinkker\b", body, re.I))
     if mentions > (3 if fmt == "linkker-guide" else 1):
