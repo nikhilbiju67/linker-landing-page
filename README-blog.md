@@ -8,7 +8,7 @@ automatically from the Oracle server (systemd timers, user `opc`).
 | When | Job | What happens |
 |---|---|---|
 | 10:00 daily | `linkker-blog-generate` | `tools/blog new` picks a topic (`pick_topic.py`), Codex researches and writes it with web search, every site's link is checked live (`linkcheck.py`), icons are fetched, the cover is rendered (`hero.mjs`). Draft goes to `content/drafts/`. Skips if 2+ drafts wait. |
-| 19:30 to 21:00 | `linkker-blog-publish` | `tools/autopublish.sh` waits 0-90 min, runs the gate (`check_draft.py --links`), publishes the oldest passing draft: Eleventy build, sitemap, feed, llms.txt, homepage block, `vercel deploy --prod`, git commit + push, IndexNow ping. Failing drafts move to `content/held/` with reasons. |
+| 19:30 to 21:00 | `linkker-blog-publish` | `tools/autopublish.sh` waits 0-90 min, runs the gate (`check_draft.py --links`), publishes the oldest passing draft: Eleventy build, sitemap, feed, llms.txt, homepage block, git commit + push to main (Vercel's GitHub integration deploys the push; the server uses no Vercel login), wait until the post is live, IndexNow ping. Failing drafts move to `content/held/` with reasons. |
 
 ## How a topic is picked
 1. **Search Console** (`gsc.py`, property `https://linkker.space/`): a query that already
