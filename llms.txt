@@ -11,6 +11,7 @@
 ## Articles
 Hand-picked lists of free websites and tools. Each page opens with quick picks, then one honest card per site.
 
+- [The 8 best free AI tools for video creation](https://linkker.space/blog/free-ai-tools-for-video-creation): Find useful video editors, AI presenters, and local video generators, with clear explanations of watermarks, usage caps, and hardware requirements.
 - [11 useful websites for students that solve specific study problems](https://linkker.space/blog/useful-websites-for-students): Find free help with citations, confusing graphs, research papers, project visuals, and getting started on assignments—with each site's catch explained.
 - [12 best free websites for portfolios](https://linkker.space/blog/best-free-websites-for-portfolios): Find a place to publish your work without paying, with clear explanations of each tool’s strengths, branding, publishing limits, and other catches.
 <!-- articles:end -->
