@@ -71,7 +71,11 @@ def main(path, live_links=False):
     hits = [b for b in banned() if b in low]
     if hits:
         bad.append("banned phrases: " + ", ".join(hits))
-    if "!" in re.sub(r"!\[[^\]]*\]\([^)]*\)|<!--.*?-->", "", prose, flags=re.S):
+    # A "!" that belongs to a listed site's own name ("Quick, Draw!") is not hype.
+    unnamed = prose
+    for nm in {it.get("name", "") for it in items if "!" in it.get("name", "")}:
+        unnamed = unnamed.replace(nm, "")
+    if "!" in re.sub(r"!\[[^\]]*\]\([^)]*\)|<!--.*?-->", "", unnamed, flags=re.S):
         bad.append("exclamation mark")
     if re.search(r"[\U0001F300-\U0001FAFF☀-➿]", prose):
         bad.append("emoji")
