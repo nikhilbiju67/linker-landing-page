@@ -77,6 +77,9 @@ def main(path, live_links=False):
         unnamed = unnamed.replace(nm, "")
     if "!" in re.sub(r"!\[[^\]]*\]\([^)]*\)|<!--.*?-->", "", unnamed, flags=re.S):
         bad.append("exclamation mark")
+    # A soft hyphen or zero-width character usually marks a title the writer cut short.
+    if re.search(r"[­​-‏⁠﻿]", "\n".join([title, desc, prose])):
+        bad.append("invisible character (soft hyphen or zero-width) - text may be cut off")
     if re.search(r"[\U0001F300-\U0001FAFF☀-➿]", prose):
         bad.append("emoji")
     if re.search(r"[$€£₹¥]\s?\d|\b\d+(\.\d+)?\s?(usd|dollars?|rupees?|euros?)\b|/\s?mo(nth)?\b", low):

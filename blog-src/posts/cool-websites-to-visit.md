@@ -1,9 +1,9 @@
 ---
-title: "12 cool websites to visit when you want something better than another­"
+title: "12 cool websites to visit when you want something better than scrolling"
 description: "Make music, wander unfamiliar streets, explore space, and find small browser experiments worth saving, with free access and clear catches."
 date: "2026-10-17"
 hero: "/assets/cool-websites-to-visit.jpg"
-heroAlt: "Cover illustration: 12 cool websites to visit when you want something better than another­, with link cards for WindowSwap, MapCrunch, earth"
+heroAlt: "Cover illustration: 12 cool websites to visit when you want something better than scrolling, with link cards for WindowSwap, MapCrunch, earth"
 readingTime: 7
 targetQuery: "cool websites to visit"
 kicker: "Hidden gems"
