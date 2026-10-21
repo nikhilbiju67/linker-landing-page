@@ -15,10 +15,9 @@ LOG="$ROOT/content/logs/autopublish.log"
 MAX_JITTER_MIN=${MAX_JITTER_MIN:-90}
 
 say() { echo "$(date '+%Y-%m-%d %H:%M:%S') $*" >> "$LOG"; }
-# Phone push on the server (ntfy topic file), notification centre on the Mac.
+# Telegram on the server (tgnotify, the Hermes bot), notification centre on the Mac.
 notify() {
-  [ -r "$HOME/.config/igtokens/ntfy_topic" ] && curl -s --max-time 10 -H "Title: Linkker blog" -d "$1" \
-    "https://ntfy.sh/$(tr -d '\n' < "$HOME/.config/igtokens/ntfy_topic")" >/dev/null 2>&1
+  [ -x "$HOME/bin/tgnotify" ] && "$HOME/bin/tgnotify" "Linkker blog" "$1"
   osascript -e "display notification \"$1\" with title \"Linkker blog\"" 2>/dev/null || true
 }
 waiting() { ls content/drafts/*.md 2>/dev/null | grep -v '/_' || true; }
