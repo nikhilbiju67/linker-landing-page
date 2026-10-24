@@ -11,6 +11,7 @@
 ## Articles
 Hand-picked lists of free websites and tools. Each page opens with quick picks, then one honest card per site.
 
+- [8 free alternatives to Microsoft Word for documents, reports, and DOCX](https://linkker.space/blog/free-alternative-to-microsoft-word): Compare free word processors for offline writing, shared drafts, and editing Word files, with the account requirements and limitations explained.
 - [6 free online tools to remove background from image files](https://linkker.space/blog/free-online-tool-to-remove-background-from-image): Make transparent PNGs with six browser tools, with clear explanations of resolution limits, commercial-use restrictions, and other catches.
 - [The 8 best free AI video generators for clips, explainers, and talking](https://linkker.space/blog/best-free-ai-video-generator): Compare tools with ongoing free access, see which actually generate footage, and understand the limits before spending time on a video.
 - [The 9 best free AI image generators](https://linkker.space/blog/best-free-ai-image-generator): Create illustrations, posters, backgrounds, and visual ideas with tools that offer ongoing free access, with clear notes on limits, privacy, and downloads.
