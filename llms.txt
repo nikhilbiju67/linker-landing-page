@@ -11,6 +11,7 @@
 ## Articles
 Hand-picked lists of free websites and tools. Each page opens with quick picks, then one honest card per site.
 
+- [12 best free tools for project management, with the catch for each](https://linkker.space/blog/best-free-tools-for-project-management): Compare practical project trackers for solo work and small teams, with clear limits on collaborators, projects, storage, and planning features.
 - [8 free alternatives to ChatGPT, with the catch for each](https://linkker.space/blog/alternative-to-chatgpt): Compare free AI assistants for writing, research, coding, and studying, with clear limits on accounts, usage, and features.
 - [11 best Chrome extensions for students, from research to deadlines](https://linkker.space/blog/best-chrome-extensions-for-students): Build a free study toolkit for planning assignments, finding papers, managing tabs, reviewing lectures, and proofreading, with each extension’s limits explained
 - [8 free alternatives to Microsoft Word for documents, reports, and DOCX](https://linkker.space/blog/free-alternative-to-microsoft-word): Compare free word processors for offline writing, shared drafts, and editing Word files, with the account requirements and limitations explained.
