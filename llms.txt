@@ -11,6 +11,7 @@
 ## Articles
 Hand-picked lists of free websites and tools. Each page opens with quick picks, then one honest card per site.
 
+- [7 free tools for how to compress PDF file size](https://linkker.space/blog/how-to-compress-pdf-file-size): Shrink a PDF for email or an upload form with seven free browser tools, clear limits, and steps for keeping the result readable.
 - [The 8 best free tools for AI video generation, with the catch for each](https://linkker.space/blog/best-free-tools-for-ai-video-generation): Make short AI clips, talking presenters, or finished videos with eight useful tools, plus clear explanations of credits, watermarks, downloads, and hardware.
 - [12 best free tools for project management, with the catch for each](https://linkker.space/blog/best-free-tools-for-project-management): Compare practical project trackers for solo work and small teams, with clear limits on collaborators, projects, storage, and planning features.
 - [8 free alternatives to ChatGPT, with the catch for each](https://linkker.space/blog/alternative-to-chatgpt): Compare free AI assistants for writing, research, coding, and studying, with clear limits on accounts, usage, and features.
