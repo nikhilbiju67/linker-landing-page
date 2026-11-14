@@ -11,6 +11,7 @@
 ## Articles
 Hand-picked lists of free websites and tools. Each page opens with quick picks, then one honest card per site.
 
+- [The 12 best free resume builder tools, with every catch explained](https://linkker.space/blog/free-resume-builder): Build, edit, and download a usable resume with these free tools, with clear limits on templates, AI help, accounts, and exports.
 - [The 9 best free stock images websites, with every catch explained](https://linkker.space/blog/free-stock-images): Find photos, illustrations, and backgrounds you can actually use for free, with clear notes on attribution, premium results, and commercial-use restrictions.
 - [6 free tools for how to save links in a folder](https://linkker.space/blog/how-to-save-links-in-a-folder): Follow practical steps for saving bookmarks into folders, collecting links across devices, and keeping URLs alongside project files.
 - [The 9 best free read it later apps, with every catch explained](https://linkker.space/blog/read-it-later-apps): Save articles for a commute, organize a reading backlog, or keep your own archive with nine tools whose core features stay free.
