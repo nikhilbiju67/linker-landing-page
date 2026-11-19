@@ -11,6 +11,7 @@
 ## Articles
 Hand-picked lists of free websites and tools. Each page opens with quick picks, then one honest card per site.
 
+- [How to organize bookmarks in Chrome with 7 free tools](https://linkker.space/blog/how-to-organize-bookmarks-in-chrome): Set up Chrome folders, tidy your bookmarks bar, clear duplicates, and find free tools for reading later or sending links to your phone.
 - [10 free websites like ChatGPT and what each does best](https://linkker.space/blog/websites-like-chatgpt): Compare free AI chat sites for writing, research, coding, and PDFs, with the sign-ups, usage caps, and paid features to watch for.
 - [The 8 best free AI clip maker tools, with every catch explained](https://linkker.space/blog/best-free-ai-clip-maker): Turn podcasts, interviews, and other footage into short clips with eight free options, compared by editing control, watermarks, and export limits.
 - [10 free AI tools for teachers, organized by your teaching week](https://linkker.space/blog/free-ai-tools-for-teachers): Build a practical teaching toolkit for lesson plans, differentiated readings, quizzes, and classroom activities, with each free plan’s limits explained.
